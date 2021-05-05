@@ -9,29 +9,29 @@ body{
     height: 100vh;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
-    align-items: center;
-}
-main{
-    width: 100%;
+    color: #EAEAEA;
+    background-color: #2B2B2E;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
+
 
 h1{
     font-weight: bold;
 }
-
+h5{
+    font-weight: 100;
+}
 footer {
     width: 100%;
-    height: 10%;
-    background-color: #EDCB96;
-    color: #2F2E41;
+    height: 8%;
+    background-color: #2B2B2E;
+    color:#EAEAEA;
     font-size: 1em;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    position: fixed;
 }

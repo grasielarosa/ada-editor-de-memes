@@ -11,30 +11,124 @@
     <script src="https://kit.fontawesome.com/2b0ee45a2e.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    
     <header>
         <h1>Generador de Memes</h1>
         <div>
             <button id="imageButton" class="image-button"><i class="fas fa-file-image"></i>Imagen</button>
             <button id="textButton" class="text-button"><i class="fas fa-font"></i>Texto</button>
-            <button id="lightButton" class="light-button"><i class="far fa-lightbulb"></i>Modo Oscuro</button>
+            <button id="lightButton" class="light-button"><i class="far fa-lightbulb"></i>Modo Claro</button>
         </div>
     </header>
+    
     <main>
         <div id="editorContent" class="editor-content">
-            <p id="topText" class="top-text"></p>
+            <p id="topText" class="top-text">Lorem, ipsum.</p>
             <div id="imageMeme" class="image-meme">
 
             </div>
-            <p id="bottonText" class="botton-text"></p>
+            <p id="bottonText" class="botton-text">Lorem ipsum dolor sit.</p>
+            <button id="downloadButton" class="download-button"><i class="fas fa-download"></i> Descargar</button>
         </div>
-        <button><i class="fas fa-download"></i> Descargar</button>
+       
+        <div>
+            <aside>
+                <section id="imageEditor">
+                    <h2>Imagen</h2>
+                    <h3>URL</h3>
+                    <input type="text">
+                    <h3>Fondo</h3>
+                    <div>
+                       <div><input type="color"></div> 
+                        <div><select name="" id=""></select></div>
+                    </div>
+                    <h3>Filtro</h3>
+                    <label for="">Brillo</label>
+                    <input type="range">
+                    <label for="">Opacidad</label>
+                    <input type="range">
+                    <label for="">Contraste</label>
+                    <input type="range">
+                    <label for="">Desenfoque</label>
+                    <input type="range">
+                    <label for="">Escala de Grises</label>
+                    <input type="range">
+                    <label for="">Sepia</label>
+                    <input type="range">
+                    <label for="">Hue</label>
+                    <input type="range">
+                    <label for="">Saturado</label>
+                    <input type="range">
+                    <label for="">Negativo</label>
+                    <input type="range">
+                    <button>Restablecer Filtros</button>
+        
+                </section>
+                <section id="textEditor">
+                    <h2>Text</h2>
+                    <div>
+                        <h3>Superior</h3>
+                        <textarea name="" id="" cols="30" rows="1"></textarea>
+                        <div>
+                            <input type="checkbox">
+                            <label for="">Sin texto superior</label>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Inferior</h3>
+                        <textarea name="" id="" cols="30" rows="1"></textarea>
+                        <div>
+                            <input type="checkbox">
+                            <label for="">Sin texto superior</label>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Fuente</h3>
+                        <select name="" id=""></select>
+                        <div>
+                            <input type="text">
+                            <button>ícono alineación</button>
+                            <button>ícono alineación</button>
+                            <button>ícono alineación</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h3>Color</h3>
+                            <input type="color">
+                        </div>
+                        <div>
+                            <h3>Fondo</h3>
+                            <input type="color">
+                        </div>
+                        <div>
+                            <input type="checkbox">
+                            <label for="">Fondo Transparente</label>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Contorno</h3>
+                        <div>
+                            <button>Ninguno</button>
+                            <button>Claro</button>
+                            <button>Oscuro</button>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Espaciado</h3>
+                        <input type="number">
+                    </div>
+                    <div>
+                        <h3>Interlineado</h3>
+                        <select name="" id=""></select>
+                    </div>
+                </section>
+            </aside>
+        </div>
     </main>
-    <aside>
-        <section id="imageEditor"></section>
-        <section id="textEditor"></section>
-    </aside>
+    
     <footer>
-        Hecho por Mari, Yani y Grasi
+       <h5>Hecho con &#127863 por Mari, Yani y Grasi.</h5>
     </footer>
     
 </body>
