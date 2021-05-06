@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,31 +12,35 @@
     <link rel="stylesheet" href="/styles/imageaside.css">
     <script src="https://kit.fontawesome.com/2b0ee45a2e.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    
+
     <header>
         <!-- BOTONES APERTURA DE EDICIÓN -->
         <h1>Generador de Memes</h1>
         <div class="buttons-header">
-            <button id="imageButton" class="image-button"><i class="fas fa-file-image" style="margin-right: 12px;"></i>Imagen</button>
-            <button id="textButton" class="text-button"><i class="fas fa-font" style="margin-right: 15px;"></i>Texto</button>
-            <button id="lightButton" class="light-button"><i class="far fa-lightbulb" style="margin-right: 12px;"></i>Modo Claro</button>
+            <button id="imageButton" class="image-button"><i class="fas fa-file-image"
+                    style="margin-right: 12px;"></i>Imagen</button>
+            <button id="textButton" class="text-button"><i class="fas fa-font"
+                    style="margin-right: 15px;"></i>Texto</button>
+            <button id="lightButton" class="light-button"><i class="far fa-lightbulb"
+                    style="margin-right: 12px;"></i>Modo Claro</button>
         </div>
     </header>
-    
+
     <main>
         <!-- EDICIÓN DE TEXTO SUPERIOR -->
         <div id="editorContent" class="editor-content">
             <p id="topText" class="top-text">Lorem, ipsum.</p>
-        <!-- EDICIÓN DE IMAGEN -->
-            <div id="imageMeme" class="image-meme" >
+            <!-- EDICIÓN DE IMAGEN -->
+            <div id="imageMeme" class="image-meme">
             </div>
-        <!-- EDICIÓN DE TEXTO INFERIOR -->
+            <!-- EDICIÓN DE TEXTO INFERIOR -->
             <p id="bottonText" class="botton-text">Lorem ipsum dolor sit.</p>
-        <!-- BOTÓN DESCARGAR -->    
+            <!-- BOTÓN DESCARGAR -->
             <button id="downloadButton" class="download-button"><i class="fas fa-download"></i> Descargar</button>
         </div>
-       
+
         <div>
             <aside>
                 <!-- EDITOR DE IMAGEN -->
@@ -44,14 +49,14 @@
                     <h3>URL</h3>
                     <input id="url" type="url">
                     <h3>Fondo</h3>
-                    <div>
+                    <div class="row">
                         <div class="color-box">
-                            <input type="color">
-                             <span>#FFFFF</span>
-                         </div>
-                         <div>
-                             <div><select name="" id=""></select></div>
-                         </div>
+                            <input type="color" value="#EAEAEA" id="colorPickerImage" class="color-picker">
+                            <span class="color-choice">FFFFF</span>
+                        </div>
+                        <div>
+                            <div><select name="" id=""></select></div>
+                        </div>
                     </div>
                     <h3>Filtro</h3>
                     <label for="">Brillo</label>
@@ -73,9 +78,9 @@
                     <label for="">Negativo</label>
                     <input type="range">
                     <button>Restablecer Filtros</button>
-        
+
                 </section>
-                 <!-- EDITOR DE TEXTO -->
+                <!-- EDITOR DE TEXTO -->
                 <section id="textEditor">
                     <h2>Text</h2>
                     <div>
@@ -107,11 +112,11 @@
                     <div>
                         <div>
                             <h3>Color</h3>
-                            <input type="color">
+                            <input type="color" value="#EAEAEA" class="color-picker">
                         </div>
                         <div>
                             <h3>Fondo</h3>
-                            <input type="color">
+                            <input type="color" value="#EAEAEA" class="color-picker">
                         </div>
                         <div>
                             <input type="checkbox">
@@ -138,10 +143,11 @@
             </aside>
         </div>
     </main>
-    
+
     <footer>
-       <h5>Hecho con &#127863 por Mari, Yani y Grasi.</h5>
+        <h5>Hecho con &#127863 por Mari, Yani y Grasi.</h5>
     </footer>
     <script src="/scripts/script.js"></script>
 </body>
+
 </html>
