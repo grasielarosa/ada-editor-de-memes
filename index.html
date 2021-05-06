@@ -19,12 +19,9 @@
         <!-- BOTONES APERTURA DE EDICIÓN -->
         <h1>Generador de Memes</h1>
         <div class="buttons-header">
-            <button id="imageButton" class="image-button"><i class="fas fa-file-image"
-                    style="margin-right: 12px;"></i>Imagen</button>
-            <button id="textButton" class="text-button"><i class="fas fa-font"
-                    style="margin-right: 15px;"></i>Texto</button>
-            <button id="lightButton" class="light-button"><i class="far fa-lightbulb"
-                    style="margin-right: 12px;"></i>Modo Claro</button>
+            <button id="imageButton" class="image-button"><i class="fas fa-file-image"></i>Imagen</button>
+            <button id="textButton" class="text-button"><i class="fas fa-font"></i>Texto</button>
+            <button id="lightButton" class="light-button"><i class="far fa-lightbulb"></i>Modo Claro</button>
         </div>
     </header>
 
@@ -42,9 +39,12 @@
         </div>
 
         <div>
-            <aside>
+            <aside class="sidebar" >
                 <!-- EDITOR DE IMAGEN -->
-                <section id="imageEditor">
+                <button id="btn-toggle-sidebar" class="btn-close-sidebar">
+                    <i class="fas fa-times"></i>
+                </button>  <!--AGREGUE icono cierre ventana-->
+                <section id="imageEditor" class="editor-image">
                     <h2>Imagen</h2>
                     <h3>URL</h3>
                     <input id="url" type="url">
@@ -65,88 +65,89 @@
                                 </select></div>
                         </div>
                     </div>
-                    <h3>Filtro</h3>
-                    <label for="">Brillo</label>
-                    <input type="range">
-                    <label for="">Opacidad</label>
-                    <input type="range">
-                    <label for="">Contraste</label>
-                    <input type="range">
-                    <label for="">Desenfoque</label>
-                    <input type="range">
-                    <label for="">Escala de Grises</label>
-                    <input type="range">
-                    <label for="">Sepia</label>
-                    <input type="range">
-                    <label for="">Hue</label>
-                    <input type="range">
-                    <label for="">Saturado</label>
-                    <input type="range">
-                    <label for="">Negativo</label>
-                    <input type="range">
-                    <button>Restablecer Filtros</button>
+                    <h3>Filtros <i class="fas fa-adjust"></i></h3> <!--AGREGUE icono contraste-->
+                    <label for="brightnessSlider">Brillo</label> <!--AGREGUE INPUTS CLASS para todos igual y ID los diferencia-->
+                    <input type="range" id="brightnessSlider" class="input-filter" min="0" max="1" step="0.1" value="1">
+                    <label for="opacitySlider">Opacidad</label>
+                    <input type="range" id="opacitySlider"class="input-filter" min="0" max="1" step="0.1" value="1">
+                    <label for="contrastSlider">Contraste</label>
+                    <input type="range" id="contrastSlider"class="input-filter" min="100" max="1000" step="1" value="100">
+                    <label for="blurSlider">Desenfoque</label>
+                    <input type="range" id="blurSlider" class="input-filter" min="0" max="10" step="0.1" value="0">
+                    <label for="grayScaleSlider">Escala de Grises</label>
+                    <input type="range" id="grayScaleSlider" class="input-filter" min="0" max="100" step="1" value="0">
+                    <label for="sepiaSlider">Sepia</label>
+                    <input type="range" id="sepiaSlider" class="input-filter" min="0" max="100" step="1" value="0">
+                    <label for="hueRotateSlider">Hue</label>
+                    <input type="range" id="hueRotateSlider" class="input-filter" min="0" max="359" step="1" value="0">
+                    <label for="saturateSlider">Saturado</label>
+                    <input type="range" id="saturateSlider" class="input-filter" min="100" max="1000" step="10" value="100">
+                    <label for="invertSlider">Negativo</label>
+                    <input type="range" id="invertSlider" class="input-filter" min="0" max="1" step="0.1" value="0">
 
                 </section>
                 <!-- EDITOR DE TEXTO -->
-                <section id="textEditor">
-                    <h2>Text</h2>
+                <!--AGREGUE CLASE DE text editor-->
+            </section>
+            <!-- <section id="textEditor" class="editor-image"> 
+                <h2>Text</h2>
+                <div>
+                    <h3>Superior</h3>
+                    <textarea name="" id="" cols="30" rows="1"></textarea>
                     <div>
-                        <h3>Superior</h3>
-                        <textarea name="" id="" cols="30" rows="1"></textarea>
-                        <div>
-                            <input type="checkbox">
-                            <label for="">Sin texto superior</label>
-                        </div>
+                        <input type="checkbox">
+                        <label for="">Sin texto superior</label>
+                    </div>
+                </div>
+                <div>
+                    <h3>Inferior</h3>
+                    <textarea name="" id="" cols="30" rows="1"></textarea>
+                    <div>
+                        <input type="checkbox">
+                        <label for="">Sin texto superior</label>
+                    </div>
+                </div>
+                <div>
+                    <h3>Fuente</h3>
+                    <select name="" id=""></select>
+                    <div>
+                        <input type="text">
+                        <button>ícono alineación</button>
+                        <button>ícono alineación</button>
+                        <button>ícono alineación</button>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h3>Color</h3>
+                        <input type="color">
                     </div>
                     <div>
-                        <h3>Inferior</h3>
-                        <textarea name="" id="" cols="30" rows="1"></textarea>
-                        <div>
-                            <input type="checkbox">
-                            <label for="">Sin texto superior</label>
-                        </div>
+                        <h3>Fondo</h3>
+                        <input type="color">
                     </div>
                     <div>
-                        <h3>Fuente</h3>
-                        <select name="" id=""></select>
-                        <div>
-                            <input type="text">
-                            <button>ícono alineación</button>
-                            <button>ícono alineación</button>
-                            <button>ícono alineación</button>
-                        </div>
+                        <input type="checkbox">
+                        <label for="">Fondo Transparente</label>
                     </div>
+                </div>
+                <div>
+                    <h3>Contorno</h3>
                     <div>
-                        <div>
-                            <h3>Color</h3>
-                            <input type="color" value="#EAEAEA" class="color-picker">
-                        </div>
-                        <div>
-                            <h3>Fondo</h3>
-                            <input type="color" value="#EAEAEA" class="color-picker">
-                        </div>
-                        <div>
-                            <input type="checkbox">
-                            <label for="">Fondo Transparente</label>
-                        </div>
+                        <button>Ninguno</button>
+                        <button>Claro</button>
+                        <button>Oscuro</button>
                     </div>
-                    <div>
-                        <h3>Contorno</h3>
-                        <div>
-                            <button>Ninguno</button>
-                            <button>Claro</button>
-                            <button>Oscuro</button>
-                        </div>
-                    </div>
-                    <div>
-                        <h3>Espaciado</h3>
-                        <input type="number">
-                    </div>
-                    <div>
-                        <h3>Interlineado</h3>
-                        <select name="" id=""></select>
-                    </div>
-                </section>
+                </div>
+                <div>
+                    <h3>Espaciado</h3>
+                    <input type="number">
+                </div>
+                <div>
+                    <h3>Interlineado</h3>
+                    <select name="" id=""></select>
+                </div>
+            </section> -->
             </aside>
         </div>
     </main>

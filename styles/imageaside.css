@@ -6,25 +6,120 @@
     box-sizing: border-box;
 }
 
+.color-box {
+    width: 100px;
+    height: 40px;
+    display: flex;
+}
+
+/* ---------- INPUT COLOR REDONDO ----------  */
 .color-picker {
     width: 1.5em;
     height: 1.5em;
     border-radius: 50%;
-    padding: 0%;
+    padding: 0;
     overflow: hidden;
+
 }
 
 input[type="color"]::-webkit-color-swatch-wrapper {
     padding: 0;
+
 }
 
 input[type="color"]::-webkit-color-swatch {
     border: none;
+
 }
 
-.color-box {
-    width: 100px;
-    height: 40px;
-    background-color: #353538;
+/* /AGREGUE CLASE DE section SIDEBAR-/ */
+
+.sidebar {
+    background-color: #F15B43;
+    color: white;
+    height: 100%;
+    width: 250px;
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow: auto;
+}
+
+.editor-image {
+    background-color: #F15B43;
+    color: white;
+    height: 100%;
+    width: 250px;
+    position: relative;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    display: block;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+/* /AGREGUE CLASE boton cerrar/ */
+
+.btn-close-sidebar {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #2B2B2E;
+    border-radius: 50%;
+    background-color: transparent;
+    color: #2B2B2E;
+    align-self: flex-end;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+/* /AGREGUE CLASS LABELS/ */
+
+label {
+    font-size: 0.8rem;
+    margin-top: 10px;
+}
+
+
+/* /AGREGUE CLASS INPUT RANGE/ */
+
+input[type='range'] {
+    width: 100%;
+    height: 8px;
+    margin-top: 7px;
+    background-color: #FFF;
+    border-radius: 10px;
+    appearance: unset;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    height: 8px;
+    border: none;
+    border-radius: 10px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 1px solid #2B2B2E;
+    border-radius: 50%;
+    margin-top: -6px;
+    box-shadow: 1px 1px 1px #2B2B2E;
+    -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+    height: 8px;
+    background-color: #FFF;
+    border: 0.5px solid #2B2B2E;
+    border-radius: 10px;
+    appearance: unset;
+    margin-top: 7px;
+    filter: drop-shadow(2px 1px 1px #2B2B2E)
 }
