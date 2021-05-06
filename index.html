@@ -13,30 +13,35 @@
 <body>
     
     <header>
+        <!-- BOTONES APERTURA DE EDICIÓN -->
         <h1>Generador de Memes</h1>
-        <div>
-            <button id="imageButton" class="image-button"><i class="fas fa-file-image"></i>Imagen</button>
-            <button id="textButton" class="text-button"><i class="fas fa-font"></i>Texto</button>
-            <button id="lightButton" class="light-button"><i class="far fa-lightbulb"></i>Modo Claro</button>
+        <div class="buttons-header">
+            <button id="imageButton" class="image-button"><i class="fas fa-file-image" style="margin-right: 12px;"></i>Imagen</button>
+            <button id="textButton" class="text-button"><i class="fas fa-font" style="margin-right: 15px;"></i>Texto</button>
+            <button id="lightButton" class="light-button"><i class="far fa-lightbulb" style="margin-right: 12px;"></i>Modo Claro</button>
         </div>
     </header>
     
     <main>
+        <!-- EDICIÓN DE TEXTO SUPERIOR -->
         <div id="editorContent" class="editor-content">
             <p id="topText" class="top-text">Lorem, ipsum.</p>
-            <div id="imageMeme" class="image-meme">
-
+        <!-- EDICIÓN DE IMAGEN -->
+            <div id="imageMeme" class="image-meme" >
             </div>
+        <!-- EDICIÓN DE TEXTO INFERIOR -->
             <p id="bottonText" class="botton-text">Lorem ipsum dolor sit.</p>
+        <!-- BOTÓN DESCARGAR -->    
             <button id="downloadButton" class="download-button"><i class="fas fa-download"></i> Descargar</button>
         </div>
        
         <div>
             <aside>
+                <!-- EDITOR DE IMAGEN -->
                 <section id="imageEditor">
                     <h2>Imagen</h2>
                     <h3>URL</h3>
-                    <input type="text">
+                    <input id="url" type="url">
                     <h3>Fondo</h3>
                     <div>
                        <div><input type="color"></div> 
@@ -64,6 +69,7 @@
                     <button>Restablecer Filtros</button>
         
                 </section>
+                 <!-- EDITOR DE TEXTO -->
                 <section id="textEditor">
                     <h2>Text</h2>
                     <div>
@@ -130,6 +136,6 @@
     <footer>
        <h5>Hecho con &#127863 por Mari, Yani y Grasi.</h5>
     </footer>
-    
+    <script src="/scripts/script.js"></script>
 </body>
 </html>
