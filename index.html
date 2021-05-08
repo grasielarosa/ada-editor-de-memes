@@ -28,12 +28,12 @@
     <main>
         <!-- EDICIÓN DE TEXTO SUPERIOR -->
         <div id="editorContent" class="editor-content">
-            <p id="topText" class="top-text">Lorem, ipsum.</p>
+            <p id="topText" class="top-text memeText"></p>
             <!-- EDICIÓN DE IMAGEN -->
             <div id="imageMeme" class="image-meme">
             </div>
             <!-- EDICIÓN DE TEXTO INFERIOR -->
-            <p id="bottonText" class="botton-text">Lorem ipsum dolor sit.</p>
+            <p id="bottonText" class="botton-text memeText">Lorem ipsum dolor sit.</p>
             <!-- BOTÓN DESCARGAR -->
             <button id="downloadButton" class="download-button"><i class="fas fa-download"></i> Descargar</button>
         </div>
@@ -44,7 +44,7 @@
                 <button id="btn-toggle-sidebar" class="btn-close-sidebar">
                     <i class="fas fa-times"></i>
                 </button>  <!--AGREGUE icono cierre ventana-->
-                <section id="imageEditor" class="editor-image">
+                     <section id="imageEditor" class="editor-image">
                     <h2>Imagen</h2>
                     <h3>URL</h3>
                     <input id="url" type="url">
@@ -65,35 +65,34 @@
                                 </select></div>
                         </div>
                     </div>
-                    <h3>Filtros <i class="fas fa-adjust"></i></h3> <!--AGREGUE icono contraste-->
-                    <label for="brightnessSlider">Brillo</label> <!--AGREGUE INPUTS CLASS para todos igual y ID los diferencia-->
-                    <input type="range" id="brightnessSlider" class="input-filter" min="0" max="1" step="0.1" value="1">
+                    <h3>Filtros <i class="fas fa-adjust"></i></h3>
+                    <label for="brightnessSlider">Brillo</label> 
+                    <input type="range" id="brightnessSlider" class="input-filter" data-property="brightness" min="0" max="1" step="0.1" value="1">
                     <label for="opacitySlider">Opacidad</label>
-                    <input type="range" id="opacitySlider"class="input-filter" min="0" max="1" step="0.1" value="1">
+                    <input type="range" id="opacitySlider"class="input-filter" data-property="opacity"  min="0" max="1" step="0.1" value="1">
                     <label for="contrastSlider">Contraste</label>
-                    <input type="range" id="contrastSlider"class="input-filter" min="100" max="1000" step="1" value="100">
+                    <input type="range" id="contrastSlider"class="input-filter" data-property="contrast" min="100" max="1000" step="1" value="100">
                     <label for="blurSlider">Desenfoque</label>
-                    <input type="range" id="blurSlider" class="input-filter" min="0" max="10" step="0.1" value="0">
+                    <input type="range" id="blurSlider" class="input-filter" data-property="blur" min="0" max="10" step="0.1" value="0">
                     <label for="grayScaleSlider">Escala de Grises</label>
-                    <input type="range" id="grayScaleSlider" class="input-filter" min="0" max="100" step="1" value="0">
+                    <input type="range" id="grayScaleSlider" class="input-filter" data-property="grayscale" min="0" max="100" step="1" value="0">
                     <label for="sepiaSlider">Sepia</label>
-                    <input type="range" id="sepiaSlider" class="input-filter" min="0" max="100" step="1" value="0">
+                    <input type="range" id="sepiaSlider" class="input-filter" data-property="sepia" min="0" max="100" step="1" value="0">
                     <label for="hueRotateSlider">Hue</label>
-                    <input type="range" id="hueRotateSlider" class="input-filter" min="0" max="359" step="1" value="0">
+                    <input type="range" id="hueRotateSlider" class="input-filter" data-property="hue-rotation" min="0" max="359" step="1" value="0">
                     <label for="saturateSlider">Saturado</label>
-                    <input type="range" id="saturateSlider" class="input-filter" min="100" max="1000" step="10" value="100">
+                    <input type="range" id="saturateSlider" class="input-filter" data-property="saturation" min="100" max="1000" step="10" value="100">
                     <label for="invertSlider">Negativo</label>
-                    <input type="range" id="invertSlider" class="input-filter" min="0" max="1" step="0.1" value="0">
+                    <input type="range" id="invertSlider" class="input-filter" data-property="invert" min="0" max="1" step="0.1" value="0">
 
-                </section>
+                </section> -->
                 <!-- EDITOR DE TEXTO -->
-                <!--AGREGUE CLASE DE text editor-->
             </section>
             <!-- <section id="textEditor" class="editor-image"> 
                 <h2>Text</h2>
                 <div>
                     <h3>Superior</h3>
-                    <textarea name="" id="" cols="30" rows="1"></textarea>
+                    <textarea name="" id="textArea" cols="30" rows="1" class="insert-text"></textarea>
                     <div>
                         <input type="checkbox">
                         <label for="">Sin texto superior</label>
@@ -101,7 +100,7 @@
                 </div>
                 <div>
                     <h3>Inferior</h3>
-                    <textarea name="" id="" cols="30" rows="1"></textarea>
+                    <textarea name="" id="textArea2" cols="30" rows="1" class="insert-text"></textarea>
                     <div>
                         <input type="checkbox">
                         <label for="">Sin texto superior</label>
