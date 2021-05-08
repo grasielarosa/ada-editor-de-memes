@@ -54,3 +54,18 @@ filterBlend[i].addEventListener('input', changeFilter);
 }
 
 // ################## FILTROS DE TEXTO ###################
+//---------------- TEXTO ARRIBA ----------------
+const write = document.getElementById('textArea');
+const topText = document.getElementById('topText');
+const changeText = () => {
+    topText.innerText = write.value;
+}
+write.addEventListener('input', changeText);
+
+//---------------- TEXTO ABAJO ----------------
+const write2 = document.getElementById('textArea2');
+const bottonText = document.getElementById('bottonText');
+const changeText2 = () => {
+    bottonText.innerText = write2.value;
+}
+write2.addEventListener('input', changeText2);
