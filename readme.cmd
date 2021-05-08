@@ -1,5 +1,5 @@
 # Editor de Memes
-## Proyecto desarollado como trabajo práctico del módulo 2 (javascript) del curso de frontend de Ada ITW.
+## Proyecto desarollado como trabajo práctico del módulo 2 (javascript) para la [carrera de Frontend](https://adaitw.org/carreras/) de [Ada ITW](https://adaitw.org/).
 
 ### Desarooladoras: 
 - Grasiela da Rosa: [portafólio](https:)
@@ -8,6 +8,7 @@
 
 ### Observaciones para leer el código:
 - las clases están descritas con guiones;
-- las id están descritas con [no me acuerdo el nombre]
+- las id están descritas con [no me acuerdo el nombre];
+
 
 ## Abrirlo con Live server.
