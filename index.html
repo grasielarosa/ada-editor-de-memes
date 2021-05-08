@@ -46,7 +46,7 @@
                 <section id="imageEditor" class="editor-image">
                     <h2>Imagen</h2>
                     <h3>URL</h3>
-                    <input id="url" type="url">
+                    <input id="url" type="url" class="font-style">
                     <h3>Fondo</h3>
                     <div class="row">
                         <div class="color-box">
@@ -54,7 +54,7 @@
                             <span class="color-choice">FFFFF</span>
                         </div>
                         <div>
-                            <div><select name="" id="colorBlend">
+                            <div><select name="" id="colorBlend" class="font-style">
                                     <option value="unset">Ninguno</option>
                                     <option value="lighten">Aclarar</option>
                                     <option value="darken">Oscurecer</option>
@@ -96,9 +96,9 @@
                 </section>
                 <!-- EDITOR DE TEXTO -->
                 <section id="textEditor" class="editor-image hidden-sidebar">
-                    <h2>TEXTO</h2>
+                    <h2>Texto</h2>
                     <div class="container-text">
-                        <h3>Superior</h3>
+                        <label for="textArea">Superior</label>
                         <textarea name="" id="textArea" cols="28" rows="1"></textarea>
                         <div>
                             <input type="checkbox">
@@ -107,7 +107,7 @@
                     </div>
 
                     <div class="container-text">
-                        <h3>Inferior</h3>
+                        <label for="textArea2">Inferior</label>
                         <textarea name="" id="textArea2" cols="28" rows="1"></textarea>
                         <div>
                             <input type="checkbox">
@@ -115,8 +115,7 @@
                         </div>
                     </div>
                     <div class="container-text">
-                        <h3>FUENTE</h3>
-                        <!-- agregue fuentes-->
+                        <label for="fuentes">Fuente</label>
                         <select class="font-style" name="letras" id="fuentes">
                             <option value="Arial">Arial</option>
                             <option value="Arial Black">Arial Black</option>
@@ -140,14 +139,14 @@
                     </div>
                     <div class="row container-text">
                         <div>
-                            <h3>Color</h3>
+                            <label for="color-picker">Color</label>
                             <div class="color-box">
                                 <input type="color" class="color-picker">
                                 <span>FFF</span>
                             </div>
                         </div>
                         <div>
-                            <h3>Fondo</h3>
+                            <label for="color-picker">Fondo</label>
                             <div class="color-box">
                                 <input type="color" class="color-picker">
                                 <span>FFF</span>
@@ -159,7 +158,7 @@
                         <label for="">Fondo Transparente</label>
                     </div>
                     <div class="container-text">
-                        <h3>Contorno</h3>
+                        <label for="">Contorno</label>
                         <div>
                             <button>Ninguno</button>
                             <button>Claro</button>
@@ -167,11 +166,11 @@
                         </div>
                     </div>
                     <div class="container-text">
-                        <h3>Espaciado</h3>
+                        <label for="">Espaciado</label>
                         <input type="number" class="font-number">
                     </div>
                     <div class="container-text">
-                        <h3>Interlineado</h3>
+                        <label for="">Interlineado</label>
                         <select name="" id="" class="font-style"></select>
                     </div>
                 </section>
