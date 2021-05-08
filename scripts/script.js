@@ -1,4 +1,30 @@
-// ---------------- UPLOAD DEL IMAGE PARA EL MEME ---------------- 
+// ################## BOTONES SIDEBAR ###################
+const textButton = document.getElementById('textButton');
+const imageButton = document.getElementById('imageButton');
+const imageEditor = document.getElementById('imageEditor');
+const textEditor = document.getElementById('textEditor');
+const openSidebar = (event) => {
+    if(event.target===textButton){
+        imageEditor.classList.add('hidden-sidebar');
+        textEditor.classList.remove('hidden-sidebar');
+    } else if(event.target===imageButton){
+        imageEditor.classList.remove('hidden-sidebar');
+        textEditor.classList.add('hidden-sidebar');
+    }
+}
+textButton.addEventListener("click", openSidebar)
+imageButton.addEventListener("click", openSidebar)
+
+const lightMode = document.getElementById('lightButton')
+const body = document.querySelector('body')
+const changeMode = ()=>{
+    body.classList.toggle('light-scene')
+    body.classList.toggle('dark-scene')
+}
+
+lightMode.addEventListener('click', changeMode)
+
+// ################## UPLOAD DEL IMAGE PARA EL MEME ###################
 const link = document.getElementById('url');
 const insertImage = () => {
     const insertImage = document.getElementById('imageMeme');
@@ -6,6 +32,8 @@ const insertImage = () => {
 }
 link.addEventListener('change', insertImage);
 
+
+// ################## FILTROS DE IMAGE ###################
 // ---------------- CAMBIO DEL COLOR DE FONDO IMAGE PARA EL MEME ----------------
 const pickUpColor = document.getElementById('colorPickerImage');
 const changeColor = () => {
@@ -69,3 +97,4 @@ const changeText2 = () => {
     bottonText.innerText = write2.value;
 }
 write2.addEventListener('input', changeText2);
+

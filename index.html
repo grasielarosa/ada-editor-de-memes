@@ -13,7 +13,7 @@
     <script src="https://kit.fontawesome.com/2b0ee45a2e.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="dark-scene">
 
     <header>
         <!-- BOTONES APERTURA DE EDICIÓN -->
@@ -39,12 +39,13 @@
         </div>
 
         <div>
-            <aside class="sidebar" >
+            <aside class="sidebar">
                 <!-- EDITOR DE IMAGEN -->
                 <button id="btn-toggle-sidebar" class="btn-close-sidebar">
                     <i class="fas fa-times"></i>
-                </button>  <!--AGREGUE icono cierre ventana-->
-                     <section id="imageEditor" class="editor-image">
+                </button>
+                <!--AGREGUE icono cierre ventana-->
+                <section id="imageEditor" class="editor-image">
                     <h2>Imagen</h2>
                     <h3>URL</h3>
                     <input id="url" type="url">
@@ -66,87 +67,110 @@
                         </div>
                     </div>
                     <h3>Filtros <i class="fas fa-adjust"></i></h3>
-                    <label for="brightnessSlider">Brillo</label> 
-                    <input type="range" id="brightnessSlider" class="input-filter" data-property="brightness" min="0" max="1" step="0.1" value="1">
+                    <label for="brightnessSlider">Brillo</label>
+                    <input type="range" id="brightnessSlider" class="input-filter" data-property="brightness" min="0"
+                        max="1" step="0.1" value="1">
                     <label for="opacitySlider">Opacidad</label>
-                    <input type="range" id="opacitySlider"class="input-filter" data-property="opacity"  min="0" max="1" step="0.1" value="1">
+                    <input type="range" id="opacitySlider" class="input-filter" data-property="opacity" min="0" max="1"
+                        step="0.1" value="1">
                     <label for="contrastSlider">Contraste</label>
-                    <input type="range" id="contrastSlider"class="input-filter" data-property="contrast" min="100" max="1000" step="1" value="100">
+                    <input type="range" id="contrastSlider" class="input-filter" data-property="contrast" min="100"
+                        max="1000" step="1" value="100">
                     <label for="blurSlider">Desenfoque</label>
-                    <input type="range" id="blurSlider" class="input-filter" data-property="blur" min="0" max="10" step="0.1" value="0">
+                    <input type="range" id="blurSlider" class="input-filter" data-property="blur" min="0" max="10"
+                        step="0.1" value="0">
                     <label for="grayScaleSlider">Escala de Grises</label>
-                    <input type="range" id="grayScaleSlider" class="input-filter" data-property="grayscale" min="0" max="100" step="1" value="0">
+                    <input type="range" id="grayScaleSlider" class="input-filter" data-property="grayscale" min="0"
+                        max="100" step="1" value="0">
                     <label for="sepiaSlider">Sepia</label>
-                    <input type="range" id="sepiaSlider" class="input-filter" data-property="sepia" min="0" max="100" step="1" value="0">
+                    <input type="range" id="sepiaSlider" class="input-filter" data-property="sepia" min="0" max="100"
+                        step="1" value="0">
                     <label for="hueRotateSlider">Hue</label>
-                    <input type="range" id="hueRotateSlider" class="input-filter" data-property="hue-rotation" min="0" max="359" step="1" value="0">
+                    <input type="range" id="hueRotateSlider" class="input-filter" data-property="hue-rotation" min="0"
+                        max="359" step="1" value="0">
                     <label for="saturateSlider">Saturado</label>
-                    <input type="range" id="saturateSlider" class="input-filter" data-property="saturation" min="100" max="1000" step="10" value="100">
+                    <input type="range" id="saturateSlider" class="input-filter" data-property="saturation" min="100"
+                        max="1000" step="10" value="100">
                     <label for="invertSlider">Negativo</label>
-                    <input type="range" id="invertSlider" class="input-filter" data-property="invert" min="0" max="1" step="0.1" value="0">
+                    <input type="range" id="invertSlider" class="input-filter" data-property="invert" min="0" max="1"
+                        step="0.1" value="0">
 
-                </section> -->
+                </section>
                 <!-- EDITOR DE TEXTO -->
-            </section>
-            <section id="textEditor" class="editor-image"> 
-                <h2>Text</h2>
-                <div>
-                    <h3>Superior</h3>
-                    <textarea name="" id="textArea" cols="30" rows="1" class="insert-text"></textarea>
-                    <div>
-                        <input type="checkbox">
-                        <label for="">Sin texto superior</label>
+                <section id="textEditor" class="editor-image hidden-sidebar">
+                    <h2>TEXTO</h2>
+                    <div class="container-text">
+                        <h3>Superior</h3>
+                        <textarea name="" id="textArea" cols="28" rows="1"></textarea>
+                        <div>
+                            <input type="checkbox">
+                            <label for="">Sin texto superior</label>
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <h3>Inferior</h3>
-                    <textarea name="" id="textArea2" cols="30" rows="1" class="insert-text"></textarea>
-                    <div>
-                        <input type="checkbox">
-                        <label for="">Sin texto superior</label>
+
+                    <div class="container-text">
+                        <h3>Inferior</h3>
+                        <textarea name="" id="textArea2" cols="28" rows="1"></textarea>
+                        <div>
+                            <input type="checkbox">
+                            <label for="">Sin texto superior</label>
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <h3>Fuente</h3>
-                    <select name="" id=""></select>
-                    <div>
-                        <input type="text">
-                        <button>ícono alineación</button>
-                        <button>ícono alineación</button>
-                        <button>ícono alineación</button>
+                    <div class="container-text">
+                        <h3>FUENTE</h3>
+                        <!-- agregue fuentes-->
+                        <select class="font-style" name="letras" id="fuentes">
+                            <option value="Arial">Arial</option>
+                            <option value="Arial Black">Arial Black</option>
+                            <option value="American Typewriter">American Typewriter</option>
+                            <option value="Andale Mono">Andale Mono</option>
+                            <option value="Comic Sans MS">Comic Sans MS</option>
+                            <option value="Helvetica">Helvetica</option>
+                            <option value="Impact">Impact</option>
+                            <option value="Verdana">Verdana</option>
+                            <option value="Times New Roma">Times New Roman</option>
+                        </select>
+
+                        <!-- tamaño del texto -->
+                        <div>
+                            <input class="font-number" type="number">
+                            <!-- para alineacion del texto -->
+                            <button class="alignment"><i class="fas fa-align-left"></i></button>
+                            <button class="alignment"><i class="fas fa-align-center"></i></button>
+                            <button class="alignment"><i class="fas fa-align-right"></i></button>
+                        </div>
                     </div>
-                </div>
-                <div>
                     <div>
-                        <h3>Color</h3>
-                        <input type="color">
+                        <div>
+                            <h3>Color</h3>
+                            <input type="color">
+                        </div>
+                        <div>
+                            <h3>Fondo</h3>
+                            <input type="color">
+                        </div>
+                        <div>
+                            <input type="checkbox">
+                            <label for="">Fondo Transparente</label>
+                        </div>
                     </div>
                     <div>
-                        <h3>Fondo</h3>
-                        <input type="color">
+                        <h3>Contorno</h3>
+                        <div>
+                            <button>Ninguno</button>
+                            <button>Claro</button>
+                            <button>Oscuro</button>
+                        </div>
                     </div>
                     <div>
-                        <input type="checkbox">
-                        <label for="">Fondo Transparente</label>
+                        <h3>Espaciado</h3>
+                        <input type="number">
                     </div>
-                </div>
-                <div>
-                    <h3>Contorno</h3>
                     <div>
-                        <button>Ninguno</button>
-                        <button>Claro</button>
-                        <button>Oscuro</button>
+                        <h3>Interlineado</h3>
+                        <select name="" id=""></select>
                     </div>
-                </div>
-                <div>
-                    <h3>Espaciado</h3>
-                    <input type="number">
-                </div>
-                <div>
-                    <h3>Interlineado</h3>
-                    <select name="" id=""></select>
-                </div>
-            </section>
+                </section>
             </aside>
         </div>
     </main>

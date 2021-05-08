@@ -5,6 +5,15 @@
     padding: 0%;
     box-sizing: border-box;
 }
+body.dark-scene{
+    --background-color:#2B2B2E; 
+    --text-color:#EAEAEA;
+}
+body.light-scene{
+    --background-color:#EEEEEE;
+    --text-color: #2B2B2E; 
+}
+
 
 body {
     width: 100vw;
@@ -12,7 +21,7 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     color: #EAEAEA;
-    background-color: #2B2B2E;
+    background-color: var(--background-color);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -21,6 +30,7 @@ body {
 
 h1 {
     font-weight: bold;
+    color: var(--text-color);
 }
 
 h2 {

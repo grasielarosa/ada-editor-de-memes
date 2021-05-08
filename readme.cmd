@@ -9,7 +9,7 @@
 
 ### Observaciones para leer el código:
 - las clases están descritas con guiones;
-- las id están descritas con [no me acuerdo el nombre];
+- las id están descritas con camelCase;
 
 
 ## Abrirlo con Live server.

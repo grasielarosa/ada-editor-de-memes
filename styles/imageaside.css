@@ -11,6 +11,10 @@
     height: 40px;
     display: flex;
 }
+/* ---------- DISPLAY NONE ----------  */
+.hidden-sidebar {
+    display: none;
+}
 
 /* ---------- INPUT COLOR REDONDO ----------  */
 .color-picker {
@@ -58,9 +62,6 @@ input[type="color"]::-webkit-color-swatch {
     top: 0;
     right: 0;
     padding: 20px;
-    display: block;
-    flex-direction: column;
-    justify-content: space-evenly;
 }
 
 
@@ -122,4 +123,63 @@ input[type=range]:focus {
     appearance: unset;
     margin-top: 7px;
     filter: drop-shadow(2px 1px 1px #2B2B2E)
+}
+
+/* Clases Yani */
+textarea{
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    background-color:rgb(249, 196, 177) ;
+    border: 1px solid rgb(249, 196, 177);
+    padding: 10px;
+}
+.container-text{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.font-style{
+    width:100%;
+    height: 30px;
+    border-radius: 5px;
+    background-color:rgb(249, 196, 177) ;
+    border: 1px solid rgb(249, 196, 177);
+    padding: 5px;
+    margin-bottom: 5px;
+    color: white;
+    font-size:1em;
+}
+.font-number{
+    width:50%;
+    height: 30px;
+    border-radius: 5px;
+    background-color:rgb(249, 196, 177);
+    color :white;
+    border: 1px solid rgb(249, 196, 177);
+    padding: 5px;
+}
+
+.alignment{
+    width:30px;
+    height: 30px;
+    border-radius: 5px;
+    background-color:rgb(249, 196, 177);
+    color :white;
+    border: 1px solid rgb(249, 196, 177);
+}
+.fas{
+    font-size: 1.2em;
+    padding-left: 7px;
+}
+textarea:hover{
+    background-color:rgb(249, 217, 208);
+}
+.font-style:hover{
+    background-color:rgb(249, 217, 208);
+}
+.font-number:hover{
+    background-color:rgb(249, 217, 208);
+}
+.alignment:hover{
+    background-color:rgb(249, 217, 208);
 }
