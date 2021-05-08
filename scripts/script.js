@@ -52,3 +52,5 @@ for(i=0; i<filterBlend.length; i++ ){
     
 filterBlend[i].addEventListener('input', changeFilter);
 }
+
+// ################## FILTROS DE TEXTO ###################
