@@ -18,8 +18,8 @@ imageButton.addEventListener("click", openSidebar)
 const lightMode = document.getElementById('lightButton')
 const body = document.querySelector('body')
 const changeMode = ()=>{
-    body.classList.toggle('light-scene')
-    body.classList.toggle('dark-scene')
+    body.classList.toggle('light-theme')
+    body.classList.toggle('dark-theme')
 }
 
 lightMode.addEventListener('click', changeMode)

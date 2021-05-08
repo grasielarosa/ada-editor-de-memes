@@ -7,13 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generador de Memes</title>
     <link rel="stylesheet" href="/styles/style.css">
-    <link rel="stylesheet" href="/styles/header.css">
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="/styles/imageaside.css">
+    <link rel="stylesheet" href="/styles/aside.css">
     <script src="https://kit.fontawesome.com/2b0ee45a2e.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="dark-scene">
+<body class="dark-theme">
 
     <header>
         <!-- BOTONES APERTURA DE EDICIÓN -->
@@ -132,7 +130,7 @@
                         </select>
 
                         <!-- tamaño del texto -->
-                        <div>
+                        <div >
                             <input class="font-number" type="number">
                             <!-- para alineacion del texto -->
                             <button class="alignment"><i class="fas fa-align-left"></i></button>
@@ -140,21 +138,27 @@
                             <button class="alignment"><i class="fas fa-align-right"></i></button>
                         </div>
                     </div>
-                    <div>
+                    <div class="row container-text">
                         <div>
                             <h3>Color</h3>
-                            <input type="color">
+                            <div class="color-box">
+                                <input type="color" class="color-picker">
+                                <span>FFF</span>
+                            </div>
                         </div>
                         <div>
                             <h3>Fondo</h3>
-                            <input type="color">
-                        </div>
-                        <div>
-                            <input type="checkbox">
-                            <label for="">Fondo Transparente</label>
+                            <div class="color-box">
+                                <input type="color" class="color-picker">
+                                <span>FFF</span>
+                            </div>
                         </div>
                     </div>
-                    <div>
+                    <div class="container-text">
+                        <input type="checkbox">
+                        <label for="">Fondo Transparente</label>
+                    </div>
+                    <div class="container-text">
                         <h3>Contorno</h3>
                         <div>
                             <button>Ninguno</button>
@@ -162,13 +166,13 @@
                             <button>Oscuro</button>
                         </div>
                     </div>
-                    <div>
+                    <div class="container-text">
                         <h3>Espaciado</h3>
-                        <input type="number">
+                        <input type="number" class="font-number">
                     </div>
-                    <div>
+                    <div class="container-text">
                         <h3>Interlineado</h3>
-                        <select name="" id=""></select>
+                        <select name="" id="" class="font-style"></select>
                     </div>
                 </section>
             </aside>
