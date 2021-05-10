@@ -81,6 +81,24 @@ for(i=0; i<filterBlend.length; i++ ){
 filterBlend[i].addEventListener('input', changeFilter);
 }
 
+// ################## RESET FILTROS ###################
+const resetFiltersButton = document.getElementById('resetFiltersButton');
+const resetFilter = () => {
+    brightness.value= 1;
+    opacity.value= 1;
+    contrast.value= 100;
+    blur.value= 0;
+    grayscale.value= 0;
+    sepia.value= 0;
+    hueRotation.value= 0;
+    saturation.value= 100;
+    invert.value= 0;
+    
+    changeFilter();
+}
+resetFiltersButton.addEventListener('click', resetFilter);
+
+
 // ################## FILTROS DE TEXTO ###################
 //---------------- TEXTO ARRIBA ----------------
 const write = document.getElementById('textArea');
@@ -92,9 +110,9 @@ write.addEventListener('input', changeText);
 
 //---------------- TEXTO ABAJO ----------------
 const write2 = document.getElementById('textArea2');
-const bottonText = document.getElementById('bottonText');
+const bottomText = document.getElementById('bottomText');
 const changeText2 = () => {
-    bottonText.innerText = write2.value;
+    bottomText.innerText = write2.value;
 }
 write2.addEventListener('input', changeText2);
 
