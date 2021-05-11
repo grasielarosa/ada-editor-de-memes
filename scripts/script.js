@@ -4,10 +4,10 @@ const imageButton = document.getElementById('imageButton');
 const imageEditor = document.getElementById('imageEditor');
 const textEditor = document.getElementById('textEditor');
 const openSidebar = (event) => {
-    if(event.target===textButton){
+    if (event.target === textButton) {
         imageEditor.classList.add('hidden-sidebar');
         textEditor.classList.remove('hidden-sidebar');
-    } else if(event.target===imageButton){
+    } else if (event.target === imageButton) {
         imageEditor.classList.remove('hidden-sidebar');
         textEditor.classList.add('hidden-sidebar');
     }
@@ -17,7 +17,7 @@ imageButton.addEventListener("click", openSidebar)
 
 const lightMode = document.getElementById('lightButton')
 const body = document.querySelector('body')
-const changeMode = ()=>{
+const changeMode = () => {
     body.classList.toggle('light-theme')
     body.classList.toggle('dark-theme')
 }
@@ -53,53 +53,54 @@ colorBlend.addEventListener('input', changeBlend);
 //---------------- CAMBIO DE FILTRO IMAGE PARA EL MEME ----------------
 const filterBlend = document.getElementsByClassName('input-filter');
 const colorMeme = document.getElementById('imageMeme');
-const brightness=document.getElementById('brightnessSlider');
-const opacity=document.getElementById('opacitySlider');
-const contrast=document.getElementById('contrastSlider');
-const blur=document.getElementById('blurSlider');
-const grayscale=document.getElementById('grayScaleSlider');
-const sepia=document.getElementById('sepiaSlider');
-const hueRotation=document.getElementById('hueRotateSlider');
-const saturation=document.getElementById('saturateSlider');
-const invert=document.getElementById('invertSlider');
+const brightness = document.getElementById('brightnessSlider');
+const opacity = document.getElementById('opacitySlider');
+const contrast = document.getElementById('contrastSlider');
+const blur = document.getElementById('blurSlider');
+const grayscale = document.getElementById('grayScaleSlider');
+const sepia = document.getElementById('sepiaSlider');
+const hueRotation = document.getElementById('hueRotateSlider');
+const saturation = document.getElementById('saturateSlider');
+const invert = document.getElementById('invertSlider');
 
 const changeFilter = () => {
-    let brightnessValue= brightness.value;
-    let opacityValue= opacity.value;
-    let contrastValue= contrast.value;
-    let blurValue= blur.value;
-    let grayscaleValue= grayscale.value;
-    let sepiaValue= sepia.value;
-    let hueRotationValue= hueRotation.value;
-    let saturationValue= saturation.value;
-    let invertValue= invert.value;
+    let brightnessValue = brightness.value;
+    let opacityValue = opacity.value;
+    let contrastValue = contrast.value;
+    let blurValue = blur.value;
+    let grayscaleValue = grayscale.value;
+    let sepiaValue = sepia.value;
+    let hueRotationValue = hueRotation.value;
+    let saturationValue = saturation.value;
+    let invertValue = invert.value;
     colorMeme.style.filter = `brightness(${brightnessValue}) opacity(${opacityValue}) blur(${blurValue}px) contrast(${contrastValue}%) grayscale(${grayscaleValue}%) hue-rotate(${hueRotationValue}deg) sepia(${sepiaValue}%) saturate(${saturationValue}%) invert(${invertValue})`;
 }
 
-for(i=0; i<filterBlend.length; i++ ){
-    
-filterBlend[i].addEventListener('input', changeFilter);
+for (i = 0; i < filterBlend.length; i++) {
+
+    filterBlend[i].addEventListener('input', changeFilter);
 }
 
 // ################## RESET FILTROS ###################
 const resetFiltersButton = document.getElementById('resetFiltersButton');
 const resetFilter = () => {
-    brightness.value= 1;
-    opacity.value= 1;
-    contrast.value= 100;
-    blur.value= 0;
-    grayscale.value= 0;
-    sepia.value= 0;
-    hueRotation.value= 0;
-    saturation.value= 100;
-    invert.value= 0;
-    
+    brightness.value = 1;
+    opacity.value = 1;
+    contrast.value = 100;
+    blur.value = 0;
+    grayscale.value = 0;
+    sepia.value = 0;
+    hueRotation.value = 0;
+    saturation.value = 100;
+    invert.value = 0;
+
     changeFilter();
 }
 resetFiltersButton.addEventListener('click', resetFilter);
 
 
 // ################## FILTROS DE TEXTO ###################
+
 //---------------- TEXTO ARRIBA ----------------
 const write = document.getElementById('textArea');
 const topText = document.getElementById('topText');
@@ -119,20 +120,19 @@ write2.addEventListener('input', changeText2);
 //---------------- CAMBIAR FONTES ----------------
 const letterFonts = document.getElementById('letterFonts');
 const changeFont = () => {
-topText.style.fontFamily = letterFonts.value
-bottomText.style.fontFamily = letterFonts.value
+    topText.style.fontFamily = letterFonts.value
+    bottomText.style.fontFamily = letterFonts.value
 }
 letterFonts.addEventListener('change', changeFont);
-//-------- SIN TEXTO TOP / BOTTOM -----------------------
 
+//-------- SIN TEXTO TOP / BOTTOM -----------------------
 const hideTopText = document.getElementById('hideTopText');
 const hideBottomText = document.getElementById('hideBottomText');
-
 const hiddenText = (event) => {
-    if(event.target===hideTopText){
+    if (event.target === hideTopText) {
         topText.classList.toggle('hidden-text');
-    
-    } else if(event.target===hideBottomText){
+
+    } else if (event.target === hideBottomText) {
         bottomText.classList.toggle('hidden-text');
     }
 }
@@ -140,7 +140,6 @@ hideTopText.addEventListener("click", hiddenText)
 hideBottomText.addEventListener("click", hiddenText)
 
 //--------- TAMAÑO DE LETRA  -------------------
-
 const letterSize = document.getElementById('fontSize');
 const changeFontSize = () => {
     topText.style.fontSize = letterSize.value + "px";
@@ -149,25 +148,34 @@ const changeFontSize = () => {
 letterSize.addEventListener('change', changeFontSize);
 
 //------- ALINEACION DE TEXTO ------
-
-
-const btnLeft =  document.getElementById('btnLeft');
+const btnLeft = document.getElementById('btnLeft');
 const changeLeft = () => {
-  topText.style.justifyContent = 'flex-start';
-  bottomText.style.justifyContent = 'flex-start';
+    topText.style.justifyContent = 'flex-start';
+    bottomText.style.justifyContent = 'flex-start';
 }
 btnLeft.addEventListener('click', changeLeft);
 
 const btnCenter = document.getElementById('btnCenter');
 const changeCenter = () => {
-  topText.style.justifyContent = 'center';
-  bottomText.style.justifyContent = 'center';
+    topText.style.justifyContent = 'center';
+    bottomText.style.justifyContent = 'center';
 }
-btnCenter.addEventListener('click',changeCenter)
+btnCenter.addEventListener('click', changeCenter)
 
 const btnRight = document.getElementById('btnRight');
 const changeRight = () => {
-  topText.style.justifyContent = 'flex-end';
-  bottomText.style.justifyContent = 'flex-end';
+    topText.style.justifyContent = 'flex-end';
+    bottomText.style.justifyContent = 'flex-end';
 }
-btnRight.addEventListener('click',changeRight)
+btnRight.addEventListener('click', changeRight)
+
+//---------------- CAMBIAR COLOR TEXTO ----------------
+const colorPickerText = document.getElementById('colorPickerText');
+const changeTextColor = () => {
+    const colorTopText = document.getElementById('topText');
+    colorTopText.style.color = colorPickerText.value;
+    const colorBottomText = document.getElementById('bottomText');
+    colorBottomText.style.color = colorPickerText.value;
+}
+colorPickerText.addEventListener('input', changeTextColor);
+
