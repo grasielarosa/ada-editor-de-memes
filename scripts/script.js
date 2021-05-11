@@ -116,3 +116,58 @@ const changeText2 = () => {
 }
 write2.addEventListener('input', changeText2);
 
+//---------------- CAMBIAR FONTES ----------------
+const letterFonts = document.getElementById('letterFonts');
+const changeFont = () => {
+topText.style.fontFamily = letterFonts.value
+bottomText.style.fontFamily = letterFonts.value
+}
+letterFonts.addEventListener('change', changeFont);
+//-------- SIN TEXTO TOP / BOTTOM -----------------------
+
+const hideTopText = document.getElementById('hideTopText');
+const hideBottomText = document.getElementById('hideBottomText');
+
+const hiddenText = (event) => {
+    if(event.target===hideTopText){
+        topText.classList.toggle('hidden-text');
+    
+    } else if(event.target===hideBottomText){
+        bottomText.classList.toggle('hidden-text');
+    }
+}
+hideTopText.addEventListener("click", hiddenText)
+hideBottomText.addEventListener("click", hiddenText)
+
+//--------- TAMAÑO DE LETRA  -------------------
+
+const letterSize = document.getElementById('fontSize');
+const changeFontSize = () => {
+    topText.style.fontSize = letterSize.value + "px";
+    bottomText.style.fontSize = letterSize.value + "px";
+}
+letterSize.addEventListener('change', changeFontSize);
+
+//------- ALINEACION DE TEXTO ------
+
+
+const btnLeft =  document.getElementById('btnLeft');
+const changeLeft = () => {
+  topText.style.justifyContent = 'flex-start';
+  bottomText.style.justifyContent = 'flex-start';
+}
+btnLeft.addEventListener('click', changeLeft);
+
+const btnCenter = document.getElementById('btnCenter');
+const changeCenter = () => {
+  topText.style.justifyContent = 'center';
+  bottomText.style.justifyContent = 'center';
+}
+btnCenter.addEventListener('click',changeCenter)
+
+const btnRight = document.getElementById('btnRight');
+const changeRight = () => {
+  topText.style.justifyContent = 'flex-end';
+  bottomText.style.justifyContent = 'flex-end';
+}
+btnRight.addEventListener('click',changeRight)

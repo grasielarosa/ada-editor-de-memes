@@ -102,7 +102,7 @@
                         <label for="textArea">Superior</label>
                         <textarea name="" id="textArea" cols="28" rows="1"></textarea>
                         <div>
-                            <input type="checkbox">
+                            <input type="checkbox" id="hideTopText">
                             <label for="">Sin texto superior</label>
                         </div>
                     </div>
@@ -111,13 +111,14 @@
                         <label for="textArea2">Inferior</label>
                         <textarea name="" id="textArea2" cols="28" rows="1"></textarea>
                         <div>
-                            <input type="checkbox">
+                            <input type="checkbox" id="hideBottomText">
                             <label for="">Sin texto superior</label>
                         </div>
                     </div>
                     <div class="container-text">
                         <label for="fuentes">Fuente</label>
-                        <select class="font-style" name="letras" id="fuentes">
+                        <select class="font-style" name="letras" id="letterFonts"> 
+                            <!-- id fuentes? -->
                             <option value="Arial">Arial</option>
                             <option value="Arial Black">Arial Black</option>
                             <option value="American Typewriter">American Typewriter</option>
@@ -130,12 +131,12 @@
                         </select>
 
                         <!-- tamaño del texto -->
-                        <div >
-                            <input class="font-number" type="number">
+                        <div class="row">
+                            <input class="font-size" id="fontSize" type="number" min="11" max="40">
                             <!-- para alineacion del texto -->
-                            <button class="alignment"><i class="fas fa-align-left"></i></button>
-                            <button class="alignment"><i class="fas fa-align-center"></i></button>
-                            <button class="alignment"><i class="fas fa-align-right"></i></button>
+                            <button id="btnLeft" class="alignment"><i class="fas fa-align-left"></i></button>
+                            <button id="btnCenter" class="alignment"><i class="fas fa-align-center"></i></button>
+                            <button id="btnRight" class="alignment"><i class="fas fa-align-right"></i></button>
                         </div>
                     </div>
                     <div class="row container-text">

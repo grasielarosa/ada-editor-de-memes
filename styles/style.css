@@ -69,6 +69,7 @@ h5 {
 .row{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 /* ############ ESTILOS DE INPUT ############ */
@@ -215,8 +216,7 @@ header button:active {
 .top-text {
     height: 20%;
     width: 100%;
-    font-family: Impact;
-    font-size: 40;
+    padding: 10px;
     border:black 1px solid;
     color: rgb(0, 0, 0);
     display: flex;
@@ -229,10 +229,9 @@ header button:active {
 .bottom-text {
     height: 20%;
     width: 100%;
-    font-family: Impact;
+    padding: 10px;
     border:black 1px solid;
     color: rgb(0, 0, 0);
-    font-size: 40;
     display: flex;
     justify-content: center;
     align-items: center;

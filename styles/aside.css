@@ -83,7 +83,9 @@ aside .fas{
 .container-text{
     margin-top: 10px;
 }
-
+.hidden-text{
+    display: none;
+}
 .alignment{
     width:30px;
     height: 30px;
@@ -91,6 +93,9 @@ aside .fas{
     background-color:rgb(249, 196, 177);
     color :white;
     border: 1px solid rgb(249, 196, 177);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .font-style{
@@ -104,7 +109,7 @@ aside .fas{
     color:#2B2B2E;
     font-size:1em;
 }
-.font-number {
+.font-size {
     width:50%;
     height: 30px;
     border-radius: 5px;
