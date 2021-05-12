@@ -15,6 +15,8 @@ const openSidebar = (event) => {
 textButton.addEventListener("click", openSidebar)
 imageButton.addEventListener("click", openSidebar)
 
+
+// ---------------- CLARO / OSCURO ----------------
 const lightMode = document.getElementById('lightButton')
 const body = document.querySelector('body')
 const changeMode = () => {
@@ -23,6 +25,10 @@ const changeMode = () => {
 }
 
 lightMode.addEventListener('click', changeMode)
+
+
+
+
 
 // ################## UPLOAD DEL IMAGE PARA EL MEME ###################
 const link = document.getElementById('url');
@@ -33,7 +39,20 @@ const insertImage = () => {
 link.addEventListener('change', insertImage);
 
 
+
+// ################## BOTON CERRAR ASIDE ok 11/5 ###################
+const btnCloseSidebar = document.getElementById('btnCloseSidebar');
+const closeSidebar = () => {
+    sidebar.classList.add('sidebar-noshow');
+}
+btnCloseSidebar.addEventListener('click', closeSidebar);
+
+
+
+
 // ################## FILTROS DE IMAGE ###################
+
+
 // ---------------- CAMBIO DEL COLOR DE FONDO IMAGE PARA EL MEME ----------------
 const pickUpColor = document.getElementById('colorPickerImage');
 const changeColor = () => {
@@ -97,6 +116,8 @@ const resetFilter = () => {
     changeFilter();
 }
 resetFiltersButton.addEventListener('click', resetFilter);
+
+
 
 
 // ################## FILTROS DE TEXTO ###################
@@ -178,4 +199,17 @@ const changeTextColor = () => {
     colorBottomText.style.color = colorPickerText.value;
 }
 colorPickerText.addEventListener('input', changeTextColor);
+
+//---------------- CAMBIAR COLOR FONDO DEL TEXTO ----------------
+
+const colorPickerBackgroundText = document.getElementById('colorPickerBackground');
+const changeBackgroundColor = () => {
+    const backgroundTopText = document.getElementById('topText');
+    backgroundTopText.style.backgroundColor = colorPickerBackgroundText.value;
+    
+    const backgroundBottomText = document.getElementById('bottomText');
+    backgroundBottomText.style.backgroundColor = colorPickerBackgroundText.value;
+}
+colorPickerBackgroundText.addEventListener('input', changeBackgroundColor);
+
 

@@ -222,7 +222,7 @@ header button:active {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #EAEAEA;
+    background-color: black;
 
 }
 
@@ -299,5 +299,16 @@ footer {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+
+}
+/* ############## RESPONSIVE ############## */
+@media screen and (max-width: 550px) {
+
+    h1 {
+        font-size: 1.55rem;
+    }
+    .buttons-header {
+        width: 280px;
+    }
 
 }

@@ -39,7 +39,7 @@
         <div>
             <aside class="sidebar">
                 <!-- EDITOR DE IMAGEN -->
-                <button id="btn-toggle-sidebar" class="btn-close-sidebar">
+                <button type="button" id="btnCloseSidebar" class="btn-close-sidebar sidebar-noshow">
                     <i class="fas fa-times"></i>
                 </button>
                 <!--AGREGUE icono cierre ventana-->
@@ -129,11 +129,8 @@
                             <option value="Verdana">Verdana</option>
                             <option value="Times New Roma">Times New Roman</option>
                         </select>
-
-                        <!-- tamaño del texto -->
                         <div class="row">
-                            <input class="font-size" id="fontSize" type="number" min="11" max="40">
-                            <!-- para alineacion del texto -->
+                            <input class="font-size" id="fontSize" type="number" min="20" max="40" value="20">
                             <button id="btnLeft" class="alignment"><i class="fas fa-align-left"></i></button>
                             <button id="btnCenter" class="alignment"><i class="fas fa-align-center"></i></button>
                             <button id="btnRight" class="alignment"><i class="fas fa-align-right"></i></button>
@@ -160,11 +157,11 @@
                         <label for="">Fondo Transparente</label>
                     </div>
                     <div class="container-text">
-                        <label for="">Contorno</label>
-                        <div>
-                            <button>Ninguno</button>
-                            <button>Claro</button>
-                            <button>Oscuro</button>
+                        <label for="outline">Contorno</label>
+                        <div id="outline">
+                            <button id="outlineNone">Ninguno</button>
+                            <button id="outlineLight">Claro</button>
+                            <button id="outlineDark">Oscuro</button>
                         </div>
                     </div>
                     <div class="container-text">

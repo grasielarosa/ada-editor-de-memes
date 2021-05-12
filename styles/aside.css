@@ -49,6 +49,13 @@ input[type="color"]::-webkit-color-swatch {
     right: 0;
     overflow: auto;
 }
+.sidebar-noshow{
+    display: none;
+}
+.sidebar::-webkit-scrollbar {
+    display: none;
+}
+
 .editor-image {
     background-color: #FF6347;
     color: #EAEAEA;
@@ -67,19 +74,20 @@ input[type="color"]::-webkit-color-swatch {
     height: 20px;
     border: 2px solid #2B2B2E;
     border-radius: 50%;
-    background-color: transparent;
+    background-color: #FF6347;
     color: #2B2B2E;
     align-self: flex-end;
     margin-right: 20px;
-    margin-top: 20px;
+    margin-top: 40px;
+    filter: drop-shadow(2px 1px 1px #2B2B2E);
 }
 
 /* SIDE BAR TEXTO*/
-aside .fas{
+/* aside .fas{
     font-size: 1.2em;
     padding-left: 7px;
     color:#2B2B2E;
-}
+} */
 .container-text{
     margin-top: 10px;
 }
