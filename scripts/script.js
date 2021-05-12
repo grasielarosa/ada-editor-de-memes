@@ -213,3 +213,31 @@ const changeBackgroundColor = () => {
 colorPickerBackgroundText.addEventListener('input', changeBackgroundColor);
 
 
+//---------------- CONTORNO DEL TEXTO ----------------
+const none = document.getElementById('outlineNone');
+const light = document.getElementById('outlineLight');
+const dark = document.getElementById('outlineDark');
+const changeStroke = (event) =>{
+    const outlineTop = document.getElementById('topText');
+    const outlineBottom = document.getElementById('bottomText');
+    
+    if(event.target === none){
+        outlineTop.classList.remove('dark-stroke', 'light-stroke');
+        outlineBottom.classList.remove('dark-stroke', 'light-stroke');
+    } else if (event.target === light){
+        outlineTop.classList.remove('dark-stroke', 'stroke-none');
+        outlineBottom.classList.remove('dark-stroke', 'stroke-none');
+        outlineTop.classList.add('light-stroke');
+        outlineBottom.classList.add('light-stroke');
+
+    } else if (event.target === dark){
+        outlineTop.classList.remove('light-stroke', 'stroke-none');
+        outlineBottom.classList.remove('light-stroke', 'stroke-none');
+        outlineTop.classList.add('dark-stroke');
+        outlineBottom.classList.add('dark-stroke');
+}
+}
+
+none.addEventListener("click", changeStroke)
+light.addEventListener("click", changeStroke)
+dark.addEventListener("click", changeStroke)
