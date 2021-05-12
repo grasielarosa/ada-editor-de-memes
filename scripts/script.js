@@ -241,3 +241,13 @@ const changeStroke = (event) =>{
 none.addEventListener("click", changeStroke)
 light.addEventListener("click", changeStroke)
 dark.addEventListener("click", changeStroke)
+
+//---------------- ESPACIADO ----------------
+const paddingText = document.getElementById("paddingText");
+const changePadding = () => {
+    const paddingValue = paddingText.value;
+    topText.style.padding = `${paddingValue}px 50px`
+    bottomText.style.padding = `${paddingValue}px 50px`
+}
+
+paddingText.addEventListener("input", changePadding)

@@ -123,7 +123,7 @@ input[type="color"]::-webkit-color-swatch {
 .font-style:hover{
     background-color:rgb(249, 217, 208);
 }
-.font-number:hover{
+.font-size:hover{
     background-color:rgb(249, 217, 208);
 }
 .alignment:hover{
