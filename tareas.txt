@@ -3,3 +3,4 @@
 3. Fondo transparente está lejos de los items de color y fondo de texto.
 4. dar estilos a los botones del aside - grasi;
 5. verificar los estilos de input number, pues el de espaciado está pequeño;
+6. Estilos en los descriptivos /span de color;

@@ -42,7 +42,6 @@
                 <button type="button" id="btnCloseSidebar" class="btn-close-sidebar sidebar-noshow">
                     <i class="fas fa-times"></i>
                 </button>
-                <!--AGREGUE icono cierre ventana-->
                 <section id="imageEditor" class="editor-image">
                     <h2>Imagen</h2>
                     <h3>URL</h3>
@@ -51,7 +50,7 @@
                     <div class="row">
                         <div class="color-box">
                             <input type="color" value="#EAEAEA" id="colorPickerImage" class="color-picker">
-                            <span class="color-choice">FFFFF</span>
+                            <span class="color-choice" id="colorBackground">#FFFFF</span>
                         </div>
                         <div>
                             <div><select name="" id="colorBlend" class="font-style">
@@ -142,14 +141,14 @@
                                 <label for="color-picker">Color</label>
                                 <div class="color-box">
                                     <input type="color" class="color-picker" id="colorPickerText">
-                                    <span>FFF</span>
+                                    <span id="colorNameText">#FFFF</span>
                                 </div>
                             </div>
                             <div>
                                 <label for="color-picker">Fondo</label>
                                 <div class="color-box">
                                     <input type="color" class="color-picker"id="colorPickerBackground">
-                                    <span>FFF</span>
+                                    <span id="colorNameBackground">#FFFF</span>
                                 </div>
                             </div>
                         </div>

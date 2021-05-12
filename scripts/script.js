@@ -58,6 +58,9 @@ const pickUpColor = document.getElementById('colorPickerImage');
 const changeColor = () => {
     const colorMeme = document.getElementById('imageMeme');
     colorMeme.style.backgroundColor = pickUpColor.value;
+
+    const colorName1 = document.getElementById('colorBackground');
+    colorName1.innerText = pickUpColor.value.toUpperCase();
 }
 pickUpColor.addEventListener('input', changeColor);
 
@@ -195,8 +198,12 @@ const colorPickerText = document.getElementById('colorPickerText');
 const changeTextColor = () => {
     const colorTopText = document.getElementById('topText');
     colorTopText.style.color = colorPickerText.value;
+
     const colorBottomText = document.getElementById('bottomText');
     colorBottomText.style.color = colorPickerText.value;
+
+    const colorName2 = document.getElementById('colorNameText');
+    colorName2.innerText = colorPickerText.value.toUpperCase();
 }
 colorPickerText.addEventListener('input', changeTextColor);
 
@@ -209,6 +216,9 @@ const changeBackgroundColor = () => {
     
     const backgroundBottomText = document.getElementById('bottomText');
     backgroundBottomText.style.backgroundColor = colorPickerBackgroundText.value;
+
+    const colorName3 = document.getElementById('colorNameBackground');
+    colorName3.innerText = colorPickerBackgroundText.value.toUpperCase();
 }
 colorPickerBackgroundText.addEventListener('input', changeBackgroundColor);
 
