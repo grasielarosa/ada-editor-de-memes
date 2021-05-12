@@ -62,7 +62,7 @@ h3 {
 }
 
 h5 {
-    font-weight: 100;
+    font-weight: 300;
 }
 
 .row{
@@ -85,6 +85,7 @@ label {
 input[type='range'] {
     width: 100%;
     height: 8px;
+    font-size: 0.8em;
     margin-top: 7px;
     background-color: #EAEAEA;
     border-radius: 10px;
@@ -120,11 +121,15 @@ input[type=range]:focus {
 textarea{
     width: 100%;
     height: 35px;
+    font-size: 0.8em;
     border-radius: 5px;
     color: #2B2B2E;
     background-color:rgb(249, 196, 177) ;
     border: 1px solid rgb(249, 196, 177);
     padding: 10px;
+}
+textarea::-webkit-scrollbar {
+    display: none;
 }
 textarea:hover{
     background-color:rgb(249, 217, 208);
@@ -305,7 +310,9 @@ footer {
 }
 /* ############## RESPONSIVE ############## */
 @media screen and (max-width: 550px) {
-
+    body{
+        font-size: 12px;
+    }
     h1 {
         font-size: 1.55rem;
     }

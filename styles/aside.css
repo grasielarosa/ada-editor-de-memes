@@ -103,6 +103,7 @@ input[type="color"]::-webkit-color-swatch {
 .font-style{
     width:100%;
     border-radius: 5px;
+    font-size: 0.8em;
     background-color:rgb(249, 196, 177) ;
     border: 1px solid rgb(249, 196, 177);
     padding: 5px;
@@ -113,6 +114,7 @@ input[type="color"]::-webkit-color-swatch {
 .font-size {
     width:50%;
     height: 30px;
+    font-size: 0.8em;
     border-radius: 5px;
     background-color:rgb(249, 196, 177);
     color :#2B2B2E;
@@ -227,4 +229,21 @@ width:60px;
 }.outline-buttons:active {
 	position:relative;
 	top:1px;
+}
+
+@media screen and (max-width: 950px) {
+
+
+    .sidebar {
+        width: 100%;
+        align-items: center;
+    }
+     
+    .btn-close-sidebar{
+        display: unset;
+    }
+
+    .editor-image {
+       width: 80%;
+    }
 }
