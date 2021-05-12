@@ -26,12 +26,12 @@
     <main>
         <!-- EDICIÓN DE TEXTO SUPERIOR -->
         <div id="editorContent" class="editor-content">
-            <p id="topText" class="top-text memeText stroke-none" style="font-family: Impact;">TOP TEXT</p>
+            <p id="topText" class="top-text memeText stroke-none" style="font-family: Impact; font-size: 25px; line-height: 1.2;">TOP TEXT</p>
             <!-- EDICIÓN DE IMAGEN -->
             <div id="imageMeme" class="image-meme">
             </div>
             <!-- EDICIÓN DE TEXTO INFERIOR -->
-            <p id="bottomText" class="bottom-text memeText stroke-none" style="font-family: Impact;">BOTTOM TEXT</p>
+            <p id="bottomText" class="bottom-text memeText stroke-none" style="font-family: Impact; font-size: 25px; line-height: 1.2;">BOTTOM TEXT</p>
             <!-- BOTÓN DESCARGAR -->
             <button id="downloadButton" class="download-button"><i class="fas fa-download"></i> Descargar</button>
         </div>
@@ -130,7 +130,7 @@
                             <option value="Times New Roma">Times New Roman</option>
                         </select>
                         <div class="row">
-                            <input class="font-size" id="fontSize" type="number" min="20" max="40" value="20">
+                            <input class="font-size" id="fontSize" type="number" min="20" max="40" value="25">
                             <button id="btnLeft" class="alignment"><i class="fas fa-align-left"></i></button>
                             <button id="btnCenter" class="alignment"><i class="fas fa-align-center"></i></button>
                             <button id="btnRight" class="alignment"><i class="fas fa-align-right"></i></button>
@@ -171,8 +171,15 @@
                         <input type="number" id="paddingText" class="font-size" value="1" min="0">
                     </div>
                     <div class="container-text">
-                        <label for="">Interlineado</label>
-                        <select name="" id="" class="font-style"></select>
+                        <label for="lineHeight">Interlineado</label>
+                        <select name="" id="lineHeight" class="font-style">
+                            <option value="0.8">0.8</option>
+                            <option value="1.2" selected>1.2</option>
+                            <option value="1.5">1.5</option>
+                            <option value="2">2</option>
+                            <option value="2.5">2.5</option>
+                        </select>
+                        
                     </div>
                 </section>
             </aside>

@@ -40,7 +40,7 @@ link.addEventListener('change', insertImage);
 
 
 
-// ################## BOTON CERRAR ASIDE ok 11/5 ###################
+// ################## BOTON CERRAR ASIDE ###################
 const btnCloseSidebar = document.getElementById('btnCloseSidebar');
 const closeSidebar = () => {
     sidebar.classList.add('sidebar-noshow');
@@ -251,3 +251,13 @@ const changePadding = () => {
 }
 
 paddingText.addEventListener("input", changePadding)
+
+//---------------- INTERLINEADO ----------------
+const lineHeight = document.getElementById('lineHeight');
+const changeLineHeight = () => {
+    const lineHeightValue = lineHeight.value;
+    topText.style.lineHeight = lineHeightValue;
+    bottomText.style.lineHeight= lineHeightValue;
+}
+
+lineHeight.addEventListener("input", changeLineHeight)
