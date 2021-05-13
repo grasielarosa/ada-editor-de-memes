@@ -1,10 +1,10 @@
 1. repasar responsive
-2. Íconos de alineamiento - perdieron formato en la última actualización;
+2. Íconos de alineamiento - perdieron formato en la última actualización; (YANI)
 3. Fondo transparente está lejos de los items de color y fondo de texto.
-4. repasar ancla botones para que agarre iconos también.
 5. verificar los estilos de input number, pues el de espaciado está pequeño;
-6. Estilos en los descriptivos /span de color;
+6. Estilos en los descriptivos /span de color; (YANI)
 7. Estilos para los textos de los inputs;
+8. cambiar texto modo claro para volver al escuro;
 
 
 

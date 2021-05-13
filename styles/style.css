@@ -139,10 +139,12 @@ textarea:hover{
 /* ---------- BOTONES DEL HEADER ----------  */
 header .fas{
 	margin-right: 10px;
+    pointer-events:none;
 }
 header .far{
 	padding: 3px;
 	margin-right: 7px;
+    pointer-events:none;
 
 }
 header button {
@@ -309,7 +311,7 @@ footer {
 
 }
 /* ############## RESPONSIVE ############## */
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 950px) {
     body{
         font-size: 12px;
     }
@@ -319,5 +321,13 @@ footer {
     .buttons-header {
         width: 280px;
     }
-
+    header {
+        width: 100%;
+        height: 40%;
+        padding:10px 0px;
+    }
+    header button{
+        width: 85px;
+    }
 }
+

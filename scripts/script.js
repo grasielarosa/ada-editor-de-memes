@@ -3,11 +3,14 @@ const textButton = document.getElementById('textButton');
 const imageButton = document.getElementById('imageButton');
 const imageEditor = document.getElementById('imageEditor');
 const textEditor = document.getElementById('textEditor');
+const sidebar = document.getElementById('sidebar');
 const openSidebar = (event) => {
-    if (event.target === textButton) {
+    if(event.target===textButton){
+        sidebar.classList.remove('sidebar-noshow');
         imageEditor.classList.add('hidden-sidebar');
         textEditor.classList.remove('hidden-sidebar');
-    } else if (event.target === imageButton) {
+    } else if(event.target===imageButton){
+        sidebar.classList.remove('sidebar-noshow');
         imageEditor.classList.remove('hidden-sidebar');
         textEditor.classList.add('hidden-sidebar');
     }
@@ -20,8 +23,8 @@ imageButton.addEventListener("click", openSidebar)
 const lightMode = document.getElementById('lightButton')
 const body = document.querySelector('body')
 const changeMode = () => {
-    body.classList.toggle('light-theme')
-    body.classList.toggle('dark-theme')
+    body.classList.toggle('light-theme');
+    body.classList.toggle('dark-theme');
 }
 
 lightMode.addEventListener('click', changeMode)
@@ -43,7 +46,9 @@ link.addEventListener('change', insertImage);
 // ################## BOTON CERRAR ASIDE ###################
 const btnCloseSidebar = document.getElementById('btnCloseSidebar');
 const closeSidebar = () => {
+
     sidebar.classList.add('sidebar-noshow');
+
 }
 btnCloseSidebar.addEventListener('click', closeSidebar);
 
