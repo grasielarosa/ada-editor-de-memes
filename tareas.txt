@@ -1,10 +1,8 @@
-1. repasar responsive (Grasi)
-2. Íconos de alineamiento - perdieron formato en la última actualización; (YANI)
-3. Fondo transparente está lejos de los items de color y fondo de texto.
-5. verificar los estilos de input number, pues el de espaciado está pequeño;
-6. Estilos en los descriptivos /span de color; (YANI)
-7. Estilos para los textos de los inputs; (mariana)
-8. cambiar texto modo claro para volver al escuro; (Mariana)
+1. verificar los estilos de input number, pues el de espaciado está pequeño; Grasi
+2. Estilos en los descriptivos /span de color; (YANI)
+3. Accesibilidad Main
+4. Accesibilidad Aside Imagen
+5. Accesibilidad Aside Texto
 
 
 
