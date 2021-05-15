@@ -29,7 +29,21 @@ const changeMode = () => {
 
 lightMode.addEventListener('click', changeMode)
 
+// ---------------- CLARO / OSCURO TEXTO----------------
+const buttonInfo = document.getElementById('buttonInfo');
 
+const infoChange = () => {    
+    
+    buttonInfo.classList.toggle('oscuro');
+    const mode = buttonInfo.getAttribute('class');
+    if(mode === 'text-button oscuro'){
+        buttonInfo.innerText='Claro';
+    } else {
+        buttonInfo.innerText='Oscuro';
+    }
+}
+
+lightMode.addEventListener('click', infoChange)
 
 
 

@@ -135,6 +135,10 @@ textarea:hover{
     background-color:rgb(249, 217, 208);
 }
 
+input [type=url]{
+    font-size: 00.8em;
+}
+
 /* ############ Estilos de Header ############ */
 /* ---------- BOTONES DEL HEADER ----------  */
 header .fas{
@@ -200,7 +204,9 @@ header button:active {
 	display: flex;
 	justify-content: space-between;
 }
-
+.text-button{
+    display: inline-block;
+}
 /* ############ Estilos del Main ############ */
 /* ---------- CONTAINER DEL MEME ----------  */
 .editor-content {
