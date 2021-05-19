@@ -5,14 +5,16 @@
     padding: 0%;
     box-sizing: border-box;
 }
+
 /* ############ Variables modo claro y oscuro ############ */
-body.dark-theme{
-    --background-color:#2B2B2E; 
-    --text-color:#EAEAEA;
+body.dark-theme {
+    --background-color: #2B2B2E;
+    --text-color: #EAEAEA;
     --box-shadow: inset -2px -2px 6px #4D484C;
 }
-body.light-theme{
-    --background-color:#EAEAEA;
+
+body.light-theme {
+    --background-color: #EAEAEA;
     --text-color: #2B2B2E;
     --box-shadow: inset -2px -2px 6px #dad6d6;
 }
@@ -30,16 +32,18 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
 header {
-	width: 100%;
-	height: 20%;
-	background-color: var(--background-color);
-	padding: 20px 40px;
-	box-shadow: var(--box-shadow);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+    width: 100%;
+    height: 19%;
+    background-color: var(--background-color);
+    padding: 20px 40px;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 main {
     width: 100%;
     display: flex;
@@ -59,19 +63,20 @@ h2 {
 h3 {
     font-size: 0.8em;
     margin-top: 5px;
-   
+
 }
 
 h5 {
     font-weight: 300;
 }
 
-.row{
+.row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.column{
+
+.column {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -82,6 +87,7 @@ label {
     font-size: 0.8em;
     margin-top: 10px;
 }
+
 /* RANGES */
 input[type='range'] {
     width: 100%;
@@ -92,6 +98,7 @@ input[type='range'] {
     border-radius: 10px;
     appearance: unset;
 }
+
 input[type=range]::-webkit-slider-runnable-track {
     height: 8px;
     border: none;
@@ -118,96 +125,103 @@ input[type=range]:focus {
     margin-top: 7px;
     filter: drop-shadow(2px 1px 1px #2B2B2E)
 }
+
 /* TEXT AREA */
-textarea{
+textarea {
     width: 100%;
     height: 30px;
     font-size: 0.8em;
     border-radius: 5px;
     color: #2B2B2E;
-    background-color:rgb(249, 196, 177) ;
+    background-color: rgb(249, 196, 177);
     border: 1px solid rgb(249, 196, 177);
     padding: 10px;
 }
+
 textarea::-webkit-scrollbar {
     display: none;
 }
-textarea:hover{
-    background-color:rgb(249, 217, 208);
+
+textarea:hover {
+    background-color: rgb(249, 217, 208);
 }
 
-input [type=url]{
+input [type=url] {
     font-size: 0.8em;
 }
 
 /* ############ Estilos de Header ############ */
 /* ---------- BOTONES DEL HEADER ----------  */
-header .fas{
-	margin-right: 10px;
-    pointer-events:none;
+header .fas {
+    margin-right: 10px;
+    pointer-events: none;
 }
-header .far{
-	padding: 3px;
-	margin-right: 7px;
-    pointer-events:none;
+
+header .far {
+    padding: 3px;
+    margin-right: 7px;
+    pointer-events: none;
 
 }
+
 header button {
-	-moz-box-shadow: 0px 1px 0px 0px #FF6347;
-	-webkit-box-shadow: 0px 1px 0px 0px #FF6347;
-	box-shadow: 0px 1px 0px 0px #FF6347;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e38578), color-stop(1, #FF6347));
-	background: -moz-linear-gradient(center top, #e38578 5%, #FF6347 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e38578', endColorstr='#FF6347');
-	background-color: #e38578;
-	-webkit-border-top-left-radius: 6px;
-	-moz-border-radius-topleft: 6px;
-	border-top-left-radius: 6px;
-	-webkit-border-top-right-radius: 6px;
-	-moz-border-radius-topright: 6px;
-	border-top-right-radius: 6px;
-	-webkit-border-bottom-right-radius: 6px;
-	-moz-border-radius-bottomright: 6px;
-	border-bottom-right-radius: 6px;
-	-webkit-border-bottom-left-radius: 6px;
-	-moz-border-radius-bottomleft: 6px;
-	border-bottom-left-radius: 6px;
-	text-indent: 0;
-	border: 1px solid #FF6347;
-	display: inline-block;
-	color: #eaeaea;
-	font-family: 'Poppins', sans-serif;
-	font-weight: 500;
-	font-size: 12px;
-	font-style: normal;
-	height: 20px;
-	line-height: 20px;
-	width: 100px;
-	text-decoration: none;
-	text-align: center;
-	text-shadow: 0px 1px 0px #FF6347;
+    -moz-box-shadow: 0px 1px 0px 0px #FF6347;
+    -webkit-box-shadow: 0px 1px 0px 0px #FF6347;
+    box-shadow: 0px 1px 0px 0px #FF6347;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e38578), color-stop(1, #FF6347));
+    background: -moz-linear-gradient(center top, #e38578 5%, #FF6347 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e38578', endColorstr='#FF6347');
+    background-color: #e38578;
+    -webkit-border-top-left-radius: 6px;
+    -moz-border-radius-topleft: 6px;
+    border-top-left-radius: 6px;
+    -webkit-border-top-right-radius: 6px;
+    -moz-border-radius-topright: 6px;
+    border-top-right-radius: 6px;
+    -webkit-border-bottom-right-radius: 6px;
+    -moz-border-radius-bottomright: 6px;
+    border-bottom-right-radius: 6px;
+    -webkit-border-bottom-left-radius: 6px;
+    -moz-border-radius-bottomleft: 6px;
+    border-bottom-left-radius: 6px;
+    text-indent: 0;
+    border: 1px solid #FF6347;
+    display: inline-block;
+    color: #eaeaea;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    font-style: normal;
+    height: 20px;
+    line-height: 20px;
+    width: 100px;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 0px 1px 0px #FF6347;
 }
 
 header button:hover {
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #FF6347), color-stop(1, #e38578));
-	background: -moz-linear-gradient(center top, #FF6347 5%, #e38578 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF6347', endColorstr='#e38578');
-	background-color: #FF6347;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #FF6347), color-stop(1, #e38578));
+    background: -moz-linear-gradient(center top, #FF6347 5%, #e38578 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF6347', endColorstr='#e38578');
+    background-color: #FF6347;
 }
 
 header button:active {
-	position: relative;
-	top: 1px;
+    position: relative;
+    top: 1px;
 }
 
 .buttons-header {
-	width: 350px;
-	display: flex;
-	justify-content: space-between;
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
 }
-.text-button{
+
+.text-button {
     display: inline-block;
 }
+
 /* ############ Estilos del Main ############ */
 /* ---------- CONTAINER DEL MEME ----------  */
 .editor-content {
@@ -218,6 +232,7 @@ header button:active {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 /* ---------- ESTILOS DEL IMAGEN ----------  */
@@ -225,42 +240,43 @@ header button:active {
     width: 100%;
     height: 100%;
     background-color: black;
-    border:black 2px solid;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
+
 /* ---------- ESTILOS DE TEXTO MEME ----------  */
 .top-text {
     height: 20%;
     width: 100%;
-    border:black 2px solid;
     color: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #EAEAEA;
+    background-color: white;
     padding-right: 10px;
     padding-left: 10px;
+    position: static;
 
 }
 
 .bottom-text {
     height: 20%;
     width: 100%;
-    border:black 2px solid;
     color: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #EAEAEA;
+    background-color: white;
     padding-right: 10px;
     padding-left: 10px;
+    position: static;
+
 }
+
 /* ---------- BOTÓN DE DESCARGA ----------  */
 
 .download-button {
-    margin-top: 20px;
     -moz-box-shadow: inset 0px 1px 0px 0px #ff6347;
     -webkit-box-shadow: inset 0px 1px 0px 0px #ff6347;
     box-shadow: inset 0px 1px 0px 0px #ff6347;
@@ -311,8 +327,8 @@ header button:active {
 /* Etilos de Footer */
 footer {
     width: 100%;
-    height: 8%;
-    background-color:var(--background-color);
+    height: 15%;
+    background-color: var(--background-color);
     color: var(--text-color);
     font-size: 1em;
     display: flex;
@@ -321,31 +337,36 @@ footer {
     align-items: center;
 
 }
+
 /* ############## RESPONSIVE ############## */
 @media screen and (max-width: 950px) {
-    body{
+    body {
         font-size: 12px;
     }
+
     h1 {
         font-size: 1.55rem;
     }
+
     .buttons-header {
         width: 280px;
     }
+
     header {
         width: 100%;
         height: 40%;
-        padding:10px 0px;
+        padding: 10px 0px;
     }
-    header button{
+
+    header button {
         width: 85px;
     }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 500px) {
     header {
         height: 15%;
-        padding:10px 0px;
-        box-shadow:none
+        padding: 10px 0px;
+        box-shadow: none
     }
 }

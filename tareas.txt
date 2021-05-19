@@ -47,7 +47,7 @@ ok Cambiar alto de línea de texto
 ok Los colores tienen un contraste adecuado
 Las imágenes tiene el atributo alt que corresponde
 La página tiene la información meta correspondiente
-La página tiene una semántica correcta
+ok La página tiene una semántica correcta
 Los íconos y elementos que no presentan texto agregan la información correspondiente por otros medios (etiquetas aria, texto oculto)
 Los íconos y elementos que no necesitan ser anunciados por un lector de pantalla tienen la etiqueta aria correspondiente
 

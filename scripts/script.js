@@ -5,11 +5,11 @@ const imageEditor = document.getElementById('imageEditor');
 const textEditor = document.getElementById('textEditor');
 const sidebar = document.getElementById('sidebar');
 const openSidebar = (event) => {
-    if(event.target===textButton){
+    if (event.target === textButton) {
         sidebar.classList.remove('sidebar-noshow');
         imageEditor.classList.add('hidden-sidebar');
         textEditor.classList.remove('hidden-sidebar');
-    } else if(event.target===imageButton){
+    } else if (event.target === imageButton) {
         sidebar.classList.remove('sidebar-noshow');
         imageEditor.classList.remove('hidden-sidebar');
         textEditor.classList.add('hidden-sidebar');
@@ -32,14 +32,14 @@ lightMode.addEventListener('click', changeMode)
 // ---------------- CLARO / OSCURO TEXTO----------------
 const buttonInfo = document.getElementById('buttonInfo');
 
-const infoChange = () => {    
-    
+const infoChange = () => {
+
     buttonInfo.classList.toggle('oscuro');
     const mode = buttonInfo.getAttribute('class');
-    if(mode === 'text-button oscuro'){
-        buttonInfo.innerText='Claro';
+    if (mode === 'text-button oscuro') {
+        buttonInfo.innerText = 'Claro';
     } else {
-        buttonInfo.innerText='Oscuro';
+        buttonInfo.innerText = 'Oscuro';
     }
 }
 
@@ -232,7 +232,7 @@ const colorPickerBackgroundText = document.getElementById('colorPickerBackground
 const changeBackgroundColor = () => {
     const backgroundTopText = document.getElementById('topText');
     backgroundTopText.style.backgroundColor = colorPickerBackgroundText.value;
-    
+
     const backgroundBottomText = document.getElementById('bottomText');
     backgroundBottomText.style.backgroundColor = colorPickerBackgroundText.value;
 
@@ -241,30 +241,37 @@ const changeBackgroundColor = () => {
 }
 colorPickerBackgroundText.addEventListener('input', changeBackgroundColor);
 
+//---------------- CAMBIAR COLOR FONDO DEL TEXTO ----------------
+const transparentCheckbox = document.getElementById('transparentBackgroud')
+const transparentBg = () => {
+    topText.classList.toggle('transparent-top');
+    bottomText.classList.toggle('transparent-bottom');
+}
+transparentCheckbox.addEventListener('click', transparentBg);
 
 //---------------- CONTORNO DEL TEXTO ----------------
 const none = document.getElementById('outlineNone');
 const light = document.getElementById('outlineLight');
 const dark = document.getElementById('outlineDark');
-const changeStroke = (event) =>{
+const changeStroke = (event) => {
     const outlineTop = document.getElementById('topText');
     const outlineBottom = document.getElementById('bottomText');
-    
-    if(event.target === none){
+
+    if (event.target === none) {
         outlineTop.classList.remove('dark-stroke', 'light-stroke');
         outlineBottom.classList.remove('dark-stroke', 'light-stroke');
-    } else if (event.target === light){
+    } else if (event.target === light) {
         outlineTop.classList.remove('dark-stroke', 'stroke-none');
         outlineBottom.classList.remove('dark-stroke', 'stroke-none');
         outlineTop.classList.add('light-stroke');
         outlineBottom.classList.add('light-stroke');
 
-    } else if (event.target === dark){
+    } else if (event.target === dark) {
         outlineTop.classList.remove('light-stroke', 'stroke-none');
         outlineBottom.classList.remove('light-stroke', 'stroke-none');
         outlineTop.classList.add('dark-stroke');
         outlineBottom.classList.add('dark-stroke');
-}
+    }
 }
 
 none.addEventListener("click", changeStroke)
@@ -286,7 +293,7 @@ const lineHeight = document.getElementById('lineHeight');
 const changeLineHeight = () => {
     const lineHeightValue = lineHeight.value;
     topText.style.lineHeight = lineHeightValue;
-    bottomText.style.lineHeight= lineHeightValue;
+    bottomText.style.lineHeight = lineHeightValue;
 }
 
 lineHeight.addEventListener("input", changeLineHeight)
