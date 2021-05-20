@@ -7,10 +7,12 @@ const sidebar = document.getElementById('sidebar');
 const openSidebar = (event) => {
     if (event.target === textButton) {
         sidebar.classList.remove('sidebar-noshow');
+        sidebar.classList.remove('side-responsive');
         imageEditor.classList.add('hidden-sidebar');
         textEditor.classList.remove('hidden-sidebar');
     } else if (event.target === imageButton) {
         sidebar.classList.remove('sidebar-noshow');
+        sidebar.classList.remove('side-responsive');
         imageEditor.classList.remove('hidden-sidebar');
         textEditor.classList.add('hidden-sidebar');
     }

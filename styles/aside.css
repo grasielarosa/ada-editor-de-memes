@@ -65,6 +65,9 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 /* SIDE BAR GLOBAL*/
+.side-responsive {
+    display: unset;
+}
 
 .sidebar {
     background-color: #FF6347;
@@ -296,7 +299,7 @@ input[type="color"]::-webkit-color-swatch {
 
 
     .sidebar {
-        width: 80%;
+        width: 100%;
         align-items: center;
     }
 
@@ -306,5 +309,9 @@ input[type="color"]::-webkit-color-swatch {
 
     .editor-image {
         width: 80%;
+    }
+
+    .side-responsive {
+        display: none;
     }
 }
