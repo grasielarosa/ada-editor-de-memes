@@ -299,3 +299,17 @@ const changeLineHeight = () => {
 }
 
 lineHeight.addEventListener("input", changeLineHeight)
+
+//---------------- DESCARGA ----------------
+
+const meme = document.getElementById('editorContent');
+const downloadBtn = document.getElementById('downloadButton');
+
+const download = () => {
+    domtoimage.toBlob(meme)
+    .then(function (blob) {
+        window.saveAs(blob, 'my-meme.png');
+    });
+}
+
+downloadBtn.addEventListener('click', download)
