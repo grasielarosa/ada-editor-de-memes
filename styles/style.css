@@ -17,6 +17,7 @@ body.light-theme {
     --background-color: #EAEAEA;
     --text-color: #2B2B2E;
     --box-shadow: inset -2px -2px 6px #dad6d6;
+    --filter: drop-shadow(3px 2px 2px #2B2B2E)
 }
 
 /* ############ Estilos de Tags ############ */
@@ -44,8 +45,13 @@ header {
     align-items: center;
 }
 
+fieldset{
+    border-color: transparent;
+}
+
 main {
     width: 100%;
+    padding: 20px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -54,6 +60,7 @@ main {
 
 h1 {
     font-weight: bold;
+    font-size: 2.5em;
 }
 
 h2 {
@@ -135,7 +142,8 @@ textarea {
     color: #2B2B2E;
     background-color: rgb(249, 196, 177);
     border: 1px solid rgb(249, 196, 177);
-    padding: 10px;
+    padding: 5px 10px;
+    
 }
 
 textarea::-webkit-scrollbar {
@@ -144,6 +152,7 @@ textarea::-webkit-scrollbar {
 
 textarea:hover {
     background-color: rgb(249, 217, 208);
+    
 }
 
 input [type=url] {
@@ -164,7 +173,7 @@ header .far {
 
 }
 
-header button {
+header button{
     -moz-box-shadow: 0px 1px 0px 0px #FF6347;
     -webkit-box-shadow: 0px 1px 0px 0px #FF6347;
     box-shadow: 0px 1px 0px 0px #FF6347;
@@ -222,12 +231,15 @@ header button:active {
     display: inline-block;
 }
 
+header ul li{
+    list-style: none;
+}
 /* ############ Estilos del Main ############ */
 /* ---------- CONTAINER DEL MEME ----------  */
 .editor-content {
     height: 450px;
     width: 450px;
-    margin: 20px 0px;
+    filter: var(--filter);
     display: flex;
     flex-direction: column;
     justify-content: space-between;

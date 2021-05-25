@@ -10,11 +10,15 @@ const openSidebar = (event) => {
         sidebar.classList.remove('side-responsive');
         imageEditor.classList.add('hidden-sidebar');
         textEditor.classList.remove('hidden-sidebar');
+        textButton.setAttribute('aria-expanded', true);
+        imageButton.setAttribute('aria-expanded', false);
     } else if (event.target === imageButton) {
         sidebar.classList.remove('sidebar-noshow');
         sidebar.classList.remove('side-responsive');
         imageEditor.classList.remove('hidden-sidebar');
         textEditor.classList.add('hidden-sidebar');
+       
+        
     }
 }
 textButton.addEventListener("click", openSidebar)
@@ -243,7 +247,7 @@ const changeBackgroundColor = () => {
 }
 colorPickerBackgroundText.addEventListener('input', changeBackgroundColor);
 
-//---------------- CAMBIAR COLOR FONDO DEL TEXTO ----------------
+//---------------- FONDO TRANSPARENTE ----------------
 const transparentCheckbox = document.getElementById('transparentBackgroud')
 const transparentBg = () => {
     topText.classList.toggle('transparent-top');

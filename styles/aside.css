@@ -13,7 +13,7 @@
 
 /* ---------- INPUT COLOR REDONDO ----------  */
 .color-box {
-    /* width:100%; */
+    width:102px;
     height: 30px;
     border-radius: 5px;
     padding: 10px;
@@ -46,9 +46,14 @@
 }
 
 .color-name-text {
+    width: 65px;
+    height: 25px;
     font-size: 0.8em;
     margin-left: 3px;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .color-choice {
@@ -297,7 +302,10 @@ input[type="color"]::-webkit-color-swatch {
 
 @media screen and (max-width: 950px) {
 
-
+    label {
+        font-size: 1em;
+        margin-bottom: 5px;
+    }
     .sidebar {
         width: 100%;
         align-items: center;
@@ -313,5 +321,42 @@ input[type="color"]::-webkit-color-swatch {
 
     .side-responsive {
         display: none;
+    }
+
+    .box-picker{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    }
+    .column{
+        width: 100%;
+    }
+    .box-responsive{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .m-left{
+        margin-left: 5px;
+    }
+    .color-name-text{
+        font-size: 1.1em;
+    }
+
+    .font-select{
+        width: 50%;
+    }
+    .margin-text{
+        margin: 10px 0px;
+    }
+    h2{
+        text-align: center;
+        font-size: 1.5em;
+    }
+    .container-text {
+        margin-top: 0px;
+
     }
 }

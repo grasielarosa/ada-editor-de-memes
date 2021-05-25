@@ -6,8 +6,8 @@
 
 ### Desarooladoras: 
 - Grasiela da Rosa: [portafólio](https://grasielarosa.github.io/ada-portfolio-project/)
-- Mariana Delau: [portafólio](https://ybucca.github.io/PortafolioYB/)
-- Yanina Bucca: [portafólio](https://marianadeleau.github.io/ada-8va-portafolio/)
+- Mariana Delau: [portafólio] (https://marianadeleau.github.io/ada-8va-portafolio/)
+- Yanina Bucca: [portafólio] (https://ybucca.github.io/PortafolioYB/)
 
 ### Observaciones para leer el código:
 - las clases están descritas con guiones;
@@ -24,8 +24,8 @@
 
 ### Developers:
 - Grasiela da Rosa: [portafólio](https://grasielarosa.github.io/ada-portfolio-project/)
-- Mariana Delau: [portafólio](https://ybucca.github.io/PortafolioYB/)
-- Yanina Bucca: [portafólio](https://marianadeleau.github.io/ada-8va-portafolio/)
+- Mariana Delau: [portafólio] (https://marianadeleau.github.io/ada-8va-portafolio/)
+- Yanina Bucca: [portafólio] (https://ybucca.github.io/PortafolioYB/)
 
 
 ### How to read this code:
@@ -41,8 +41,8 @@
 
 ### Desenvolvedoras:
 - Grasiela da Rosa: [portafólio](https://grasielarosa.github.io/ada-portfolio-project/)
-- Mariana Delau: [portafólio](https://ybucca.github.io/PortafolioYB/)
-- Yanina Bucca: [portafólio](https://marianadeleau.github.io/ada-8va-portafolio/)
+- Mariana Delau: [portafólio] (https://marianadeleau.github.io/ada-8va-portafolio/)
+- Yanina Bucca: [portafólio] (https://ybucca.github.io/PortafolioYB/)
 
 
 ### Observações para ler esse código:

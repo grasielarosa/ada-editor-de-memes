@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-AR">
 
 <head>
     <meta charset="UTF-8">
@@ -16,16 +16,17 @@
     <header>
         <!-- BOTONES APERTURA DE EDICIÓN -->
         <h1>Generador de Memes</h1>
-        <div class="buttons-header">
-            <!-- <a href="#" id="imageButton" class=""><i class="fas fa-file-image"></i>Imagen</a>
-            <a href="#" id="textButton" class="text-button"><i class="fas fa-font"></i>Texto</a>
-            <a href="#" id="lightButton" class="light-button"><i class="far fa-lightbulb"></i>Modo Claro</a> -->
-            <button id="imageButton" class=""><i class="fas fa-file-image"></i>Imagen</button>
-            <button id="textButton" class="text-button"><i class="fas fa-font"></i>Texto</button>
-            <button id="lightButton" class="light-button"><i class="far fa-lightbulb"></i>
-                <p id="buttonInfo" class="text-button oscuro">Claro</p>
-            </button>
-        </div>
+        <nav>
+            <ul class="buttons-header">         
+                <li><button id="imageButton" class="" aria-expanded="true" aria-controls="imageEditor" aria-label="Haga click para acceder al editor de imagen" ><i class="fas fa-file-image" aria-hidden="true"></i>Imagen</button></li>
+
+                <li><button id="textButton" class="text-button" aria-expanded="false" aria-controls="textEditor" aria-label="Haga click para acceder al editor de texto"><i class="fas fa-font" aria-hidden="true"></i>Texto</button></li>
+
+                <li><button id="lightButton" class="light-button"><i class="far fa-lightbulb" aria-hidden="true" aria-label="Haga click para cambiar el tema para claro o oscuro"></i>
+                    <p id="buttonInfo" class="text-button oscuro">Claro</p>
+                </button></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
@@ -46,33 +47,37 @@
 
             <aside id="sidebar" class="sidebar side-responsive">
                 <!-- EDITOR DE IMAGEN -->
-                <!-- <a href="#" id="btnCloseSidebar" class="btn-close-sidebar sidebar-noshow">
-                    <i class="fas fa-times"></i></a> -->
-                <button type="button" id="btnCloseSidebar" class="btn-close-sidebar sidebar-noshow">
-                    <i class="fas fa-times"></i>
+                <button type="button" id="btnCloseSidebar" class="btn-close-sidebar sidebar-noshow" aria-label="cerrar ventana">
+                    <i class="fas fa-times" aria-hidden="true"></i>
                 </button>
-                <section id="imageEditor" class="editor-image">
+                <section id="imageEditor" class="editor-image" aria-labelledby="imageButton" role="complementary">
                     <h2>Imagen</h2>
-                    <h3>URL</h3>
-                    <input id="url" type="url" class="font-style">
+                    <fieldset>
+                        <h3>URL</h3>
+                        <input id="url" type="url" class="font-style">
+                    </fieldset>
+                    
                     <h3>Fondo</h3>
                     <div class="row back">
-                        <div class="color-box">
-                            <input type="color" value="#000000" id="colorPickerImage" class="color-picker">
+                        <fieldset>
+                            <div class="color-box">
+                                <input type="color" value="#000000" id="colorPickerImage" class="color-picker">
                             <span id="colorBackground" class="color-name-text">#000000</span>
                         </div>
+                        </fieldset>
+                        
                         <div>
-                            <div><select name="" id="colorBlend" class="font-style">
+                            <select name="" id="colorBlend" class="font-style font-select">
                                     <option value="unset">Ninguno</option>
                                     <option value="lighten">Aclarar</option>
                                     <option value="darken">Oscurecer</option>
                                     <option value="difference">Diferencia</option>
                                     <option value="luminosity">Luminosidad</option>
                                     <option value="multiply">Multiplicar</option>
-                                </select></div>
+                                </select>
                         </div>
                     </div>
-                    <h3>Filtros <i class="fas fa-adjust"></i></h3>
+                    <h3>Filtros <i class="fas fa-adjust" aria-hidden="true"></i></h3>
                     <label for="brightnessSlider">Brillo</label>
                     <input type="range" id="brightnessSlider" class="input-filter" data-property="brightness" min="0"
                         max="1" step="0.1" value="1">
@@ -103,29 +108,28 @@
                     <button id="resetFiltersButton" class="reset-filters-button">Restablecer Filtros</button>
                 </section>
                 <!-- EDITOR DE TEXTO -->
-                <section id="textEditor" class="editor-image hidden-sidebar">
+                <section id="textEditor" class="editor-image hidden-sidebar" aria-labelledby="textButton" role="complementary">
                     <h2>Texto</h2>
                     <div class="container-text">
                         <label for="textArea">Superior</label>
                         <textarea name="" id="textArea" cols="28" rows="1"></textarea>
-                        <div>
+                        <div class="margin-text">
                             <input type="checkbox" id="hideTopText">
-                            <label for="">Sin texto superior</label>
+                            <label for="hideTopText">Sin texto superior</label>
                         </div>
                     </div>
 
                     <div class="container-text">
                         <label for="textArea2">Inferior</label>
                         <textarea name="" id="textArea2" cols="25" rows="1"></textarea>
-                        <div>
+                        <div class="margin-text">
                             <input type="checkbox" id="hideBottomText">
-                            <label for="">Sin texto inferior</label>
+                            <label for="hideBottomText">Sin texto inferior</label>
                         </div>
                     </div>
                     <div class="container-text">
                         <label for="fuentes">Fuente</label>
-                        <select class="font-style" name="letras" id="letterFonts">
-                            <!-- id fuentes? -->
+                        <select class="font-style" name="letras" id="letterFonts" aria-label= "Estilos de fuentes">
                             <option value="Arial">Arial</option>
                             <option value="Arial Black">Arial Black</option>
                             <option value="American Typewriter">American Typewriter</option>
@@ -137,22 +141,22 @@
                             <option value="Times New Roman">Times New Roman</option>
                         </select>
                         <div class="row">
-                            <input class="font-size" id="fontSize" type="number" min="20" max="40" value="25">
-                            <button id="btnLeft" class="alignment"><i class="fas fa-align-left"></i></button>
-                            <button id="btnCenter" class="alignment"><i class="fas fa-align-center"></i></button>
-                            <button id="btnRight" class="alignment"><i class="fas fa-align-right"></i></button>
+                            <input class="font-size" id="fontSize" type="number" min="20" max="40" value="25" title="tamaño de letra">
+                            <button id="btnLeft" class="alignment" aria-label="Alinear texto a la izquierda"><i class="fas fa-align-left" aria-hidden="true"></i></button>
+                            <button id="btnCenter" class="alignment" aria-label="Alinear texto al centro"><i class="fas fa-align-center" aria-hidden="true"></i></button>
+                            <button id="btnRight" class="alignment" aria-label="Alinear texto a la derecha"><i class="fas fa-align-right" aria-hidden="true"></i></button>
                         </div>
                     </div>
                     <div class="container-text">
                         <div class="row back">
-                            <div>
+                            <div class="column">
                                 <label for="color-picker">Color</label>
                                 <div class="color-box">
                                     <input type="color" value="#EAEAEA" class="color-picker" id="colorPickerText">
                                     <span id="colorNameText" class="color-name-text">#FFFFFF</span>
                                 </div>
                             </div>
-                            <div>
+                            <div class="column m-left">
                                 <label for="color-picker">Fondo</label>
                                 <div class="color-box">
                                     <input type="color" value="#EAEAEA" class="color-picker" id="colorPickerBackground">
@@ -160,13 +164,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div>
+                        <div class="margin-text">
                             <input type="checkbox" id="transparentBackgroud">
                             <label for="">Fondo Transparente</label>
                         </div>
                     </div>
                     <div class="container-text">
-                        <label for="outline">Contorno</label>
+                        <label for="outline" aria-label="elija el tipo de contorno del texto">Contorno</label>
                         <div id="outline">
                             <button id="outlineNone" class="outline-buttons">Ninguno</button>
                             <button id="outlineLight" class="outline-buttons">Claro</button>
@@ -195,8 +199,8 @@
 
     <footer>
         <!-- BOTÓN DESCARGAR -->
-        <button type="button" id="downloadButton" class="download-button"><i class="fas fa-download"></i> Descargar</button>
-        <h5>Hecho con &#127863 por Mari, Yani y Grasi.</h5>
+        <button type="button" id="downloadButton" class="download-button" role="button" aria-label="Haga click para descargar su meme"><i class="fas fa-download" aria-hidden="true"></i> Descargar</button>
+        <h5 role="contentinfo">Hecho con &#127863 por Mari, Yani y Grasi.</h5>
     </footer>
     <script src="./scripts/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
